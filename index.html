@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buzzem Webdevelopment</title>
+    <meta name="description" content="Freelance Webdevelopers. Angular 4, WebGl, HTML5, CSS, JavaScript" />
+    <meta name="keywords" content="webdeveloper, webdesign, webentwicklung, browsergames, agentur web" />
+    <meta name="author" content="bensen em, shubosha kuro, buzzem" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Arvo:400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <script src="js/modernizr.custom.js"></script>
+</head>
+
+<body>
+    <div id="background">
+        <svg width="100%" height="100%" preserveAspectRatio="xMaxYMax slice" viewBox="0 0 400 400"  version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+            <defs>
+                <pattern id="pattern4" x="0" y="0" width="10" height="10"  patternUnits="userSpaceOnUse">
+                    <path d="M 0 0 L 50 50 L 100 100 L 150 150 L 200 200" style="stroke:black; stroke-width:1px"></path>
+                </pattern>
+            </defs>
+            <rect y="0" x="0" width="100%" height="100%"  fill="url(#pattern4)">
+        </svg>
+
+    </div>
+    <div class="landing-intro">
+        <!-- the header that will be animated by adding the respective state class to it -->
+        <!--  <div id="header">
+            <div class="container">
+
+                <div id="header-primary" class="row">
+                    <div id="logo" class="col-3">
+                        <span>buzzem</span>
+                    </div>
+                    <div id="navigation" class="col-9">
+                        <nav>
+                            <a>contact</a>
+                            <a>team</a>
+                            <a>projects</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+  -->
+        <div class="front-content">
+            <div id="intro">
+                <span id="anim1">buzz</span>
+                <span id="anim2">em</span>
+                <p>Webdevelopment</p>
+            </div>
+            <div id="mail-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24">
+                    <path fill="green" d="M12 .02c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.99 6.98l-6.99 5.666-6.991-5.666h13.981zm.01 10h-14v-8.505l7 5.673 7-5.672v8.504z"
+                    />
+                </svg>
+
+            </div>
+        </div>
+    </div>
+
+    <section id="section-one">
+        <form action="submit">
+            <div class="send-button p-5 d-none d-md-block">
+                <button class="b-btn"> Send</button>
+            </div>
+            <div class="container p-5">
+                <div class="row">
+                    <!-- <div id="map" class="col-12 p-r-3 col-md-6 ">
+                    </div> -->
+                    <div class="title pl-3">
+                        <h1>Contact</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="container--ben">
+                            <input id="name" class="input--ben" type="text" />
+                            <label for="name" class="label--ben">
+                                <span class="content--ben">Name</span>
+                            </label>
+                            <div class="container--ben before"></div>
+                        </div>
+
+
+                        <div class="container--ben">
+                            <input id="email" class="input--ben" type="text" />
+                            <label for="email" class="label--ben">
+                                <span class="content--ben">Mail</span>
+                            </label>
+                            <div class="container--ben before"></div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+
+                        <div class="container--ben">
+                            <input id="subject" class="input--ben" type="text" />
+                            <label for="subject" class="label--ben">
+                                <span class="content--ben">Subject</span>
+                            </label>
+                            <div class="container--ben before"></div>
+                        </div>
+                        <div class="container--ben" on-touch="">
+                            <input id="telephone" class="input--ben" type="text" />
+                            <label for="telephone" class="label--ben">
+                                <span class="content--ben">Telephone</span>
+                            </label>
+                            <div class="container--ben before"></div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-12">
+                        <div class="container--ben textarea">
+                            <textarea id="text" class="input--ben" type="text"></textarea>
+                            <label for="text" class="label--ben">
+                                <span class="content--ben">Message</span>
+                            </label>
+                            <div class="container--ben before"></div>
+
+                        </div>
+                    </div>
+                    <div class="col-12 d-md-none">
+                        <button class="b-btn"> Send</button>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </form>
+    </section>
+  <!--   <section id="section-two" class="section-two">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-6">
+                    <div class="card-holder">
+                        <div class="karte">
+                            <div class="theback mj">MJ Back </div>
+                            <div class="thefront mj">MJ Front </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <div class="card-holder">
+                        <div class="karte">
+                            <div class="theback bb">BB Back</div>
+                            <div class="thefront bb">BB Front</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 mt-3">
+                    <div id="cube" class="cube-wrapper">
+                        <div class="cube">
+                            <div class="s1">One
+                            </div>
+                            <div class="s2">Two</div>
+                            <div class="s3">Three</div>
+                            <div class="s4">Four</div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </section>
+ -->
+
+    <script type="text/javascript" src="js/jquery.jrumble.1.3.js"></script>
+    <script type="text/javascript" src="js/jquery.waypoints.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaxxZ6PVieoFqZiZPc7rKA49rSqcI_LIQ&callback=initMap"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

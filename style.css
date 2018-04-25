@@ -1,0 +1,478 @@
+
+:root {
+    /* Paletton */
+--random-1:  rgb(1, 2, 39);   
+--random-2: rgb(252, 241, 220); 
+--primary-0: rgba(255,170,  0,1); 	/* Main Primary color */
+--primary-1: rgba(255,203, 99,1); 
+--primary-2: rgba(255,189, 57,1); 
+--primary-3: rgba(197,131,  0,1); 
+--primary-4: rgba(155,103,  0,1); 
+
+--complement-0: rgba( 18, 64,171,1);	/* Main Complement color */
+--complement-1: rgba( 87,119,192,1);
+--complement-2: rgba( 54, 91,176,1);
+--complement-3: rgba( 13, 49,132,1);
+--complement-4: rgba(  8, 37,104,1);
+
+--four1: #e63946;
+--four2: #f1faee;
+--four3:#a8dadc;
+--four4: #457b9d;
+--four5: #1d3557;
+
+
+}
+.debug {
+    border: 4px dotted yellowgreen;
+    color: greenyellow;
+}
+
+body {
+    _background-color: var(--four3);
+    color: var(--four2);
+    font-family: 'Arvo', serif;
+}
+#background{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 00;
+    overflow: hidden;
+}
+.landing-intro{
+    position: relative;
+}
+#header{
+    display: none;
+    position:fixed;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    z-index: 5;
+    width: 100%;
+    background-color: var(--random-1);
+    height: 5vh;
+    min-height: 60px;
+    top: 0;
+}
+#navigation{
+    text-align: right;
+}
+nav a {
+    margin-left: 1em;
+}
+
+.front-content {
+    height: 100vh;
+    position: relative;
+    background-color: var(--four5);
+    opacity: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all .3s ease;
+    z-index: 20;
+}
+
+.front-content.slide-out{
+    transform: translateY(-100%);
+}
+
+#intro{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+line-height: .9;
+-webkit-user-select: none; /* Safari */        
+-moz-user-select: none; /* Firefox */
+-ms-user-select: none; /* IE10+/Edge */
+user-select: none; /* Standard */
+text-transform: uppercase;
+    }
+#intro p{
+    text-align: right;
+    font-size: 3em;
+}
+#anim1, #anim2{
+    font-size: 7.5em;
+    
+}
+
+#anim1 {
+    color: var(--four2);
+    cursor: pointer;
+    margin-right: .1em;
+}
+#anim1:hover{
+}
+#anim2{
+    color: var(--four4);
+    position: relative;
+}
+#mail-button{
+    position: absolute;
+    bottom: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#mail-button path{
+    fill: var(--four4);
+}
+#mail-button:hover path{
+    cursor: pointer;
+    fill:var(--four2);
+}
+
+#section-one{
+    position: absolute;
+    width: 90%;
+    height: 90vh;
+    top: -50%;
+    left: 50%;
+    background-color:var(--four1);
+    transform: translateX(-50%) translateY(-50%);
+    transition: all .3s ease;
+    transition-delay: .5s;
+    
+    
+}
+#section-one.slide-in{
+    top: 50%;
+    overflow: scroll;
+}
+#section-one .container{
+    position: absolute;
+    bottom: 0; 
+    right: 0; 
+    width: 100%;
+}
+
+
+form.container{
+}
+.send-button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow: visible;
+}
+.title{
+    display: block;
+    _border-right: 1px dotted var(--four5);
+}
+#section-one h1{
+    margin-bottom: .5em;
+    text-transform: uppercase;
+}
+
+input, textarea { 
+    font-family: 'Arvo', serif;
+    padding: .2em;
+    font-size: 1.25em;
+
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+.container--ben {
+    position: relative;
+    height: 6em;
+    width: 100%;
+    margin-bottom: 1em;
+    padding: 0;
+    background-color: var(--four2);
+    transition: all .4s ease;
+}
+.textarea{
+    height: 12em;
+} 
+.container--ben.filled{
+    border: 5px solid var(--four5);
+    transition: all .4s ease;
+}
+
+ .container--ben.before {
+    display: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 2em;
+    width: 100%;
+    background-color: var(--four5);
+    z-index: 90;
+    transition: inherit;
+}
+
+.input--ben{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: var(--four5);
+    padding-left: 1em;
+    padding-bottom: 1em;
+    
+}
+
+.input--ben::before{
+    
+}
+
+.label--ben{
+    position: absolute;
+    color: var(--four1);
+    padding: 1em;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: .4s all ease-out;
+    font-size: 1.5em;
+    z-index: 95;
+}
+.content--ben::after{
+    
+}
+.content--ben{
+    color: var(--four1);
+}
+
+.label--ben.filled{
+    top:0;
+    margin-top: 0;
+    padding: .8em;
+    padding-top: .1em;
+    line-height: 1em;
+    font-size: 1.5em;
+    border: 0px dotted var(--four1);
+    transform: translateY(0%);
+
+    
+}
+.input--ben:focus>.content--ben{
+    line-height: 2em;
+
+}
+
+
+input, textarea {
+    padding-top:1.75em;
+    margin-bottom: .4em;
+
+}/*
+input:focus, textarea:focus{
+    padding-top: 1em !important;
+    padding-bottom: 1em !important;
+    font-size: 1.2em;
+}
+input::placeholder, textarea::placeholder{
+    font-size: 1em;
+    transition: all 2s ease;
+}
+input:focus::placeholder, textarea:focus::placeholder{
+    font-size: 1.2em;
+    
+} */
+
+
+/* TEXT OF BUTTONS*/
+.b-btn{
+    font-size: 2em;
+    width: 6em;
+    height: 6em;
+    font-family: 'Arvo', serif;
+    background: none;
+    overflow: hidden;
+    position: relative;
+    border: var(--four5) 5px dotted;
+    color: var(--four5);
+    cursor: pointer;
+    z-index: 0;
+    border-radius: 0px;
+}
+/* BACKGROUNDCOLOR OF BUTTONS*/
+.b-btn::before{
+    content: '';
+    position: absolute;
+    _width: 100%;
+    _height: 100%;
+    left:0;
+    top:0;
+    background-color:transparent;
+    z-index: -2;
+}
+
+/*ANIMATED BACKGROUND OF BUTTONS*/
+.b-btn::after{
+    content: '';
+    transition: all .6s;    
+    position: absolute;
+    top:-100px;
+    left:-50px;
+    transform: rotate(-15deg);
+    height:400%;
+    width:0;
+    color: var(--four1);
+    background-color: var(--four5);
+    z-index: -1;
+    
+}
+.b-btn:hover{
+    color: var(--four1);
+    transition-delay: color .3s;
+}
+.b-btn:hover::after, .b-btn:active::after{
+    width: 160%;
+}
+
+/* MAP */
+
+#map{
+    height: 500px;
+    margin-bottom: 2em;
+}
+
+
+
+#section-two{
+    height: 100vh;
+    background-color:var(--complement-1);
+    overflow: hidden;
+    
+}
+
+.card-holder{
+    min-width: 150px;
+    height: 400px;
+    min-height: 250px;
+    margin: 0 auto;
+    position: relative;
+    perspective: 500px;
+    overflow: unset;
+    
+}
+
+.karte{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: all .3s ease-in-out;
+    transform-origin: 50% 50%;
+    overflow: inherit;
+    
+    
+    backface-visibility: hidden;
+}
+
+
+.thefront{
+}
+.theback{
+    transform: rotateY(180deg);
+}
+.karte:hover{
+    transform: rotateY(30deg);
+}
+
+ div.theback.bb{
+    background-image: url("assets/bb1.png");
+}
+div.thefront.bb{
+    background-image: url("assets/bb2.png");
+}
+div.theback.mj{
+    background-image: url("assets/mj1.png");
+}
+div.thefront.mj{
+    background-image: url("assets/mj2.png");
+} 
+
+.thefront, .theback{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border: 3px blueviolet solid;
+    background-size: cover;
+    
+}
+.cube-wrapper{
+    perspective: 800px; /* Must be set on parent*/
+    width: 500px;
+    height: 500px;
+    border: thick ridge red;
+
+}
+.cube {    
+    margin: 100px auto;
+    width: 200px;
+    height:200px;
+    position: relative;
+    transition: all .3s ease-in-out;
+    overflow: unset;
+    backface-visibility: hidden;
+    perspective-origin: 50% 50%;
+    transform-style: preserve-3d;
+    transform-origin: 50% 50% -100px;
+    
+}
+.cube:hover{
+
+
+}
+.s1, .s2, .s3, .s4 {
+    position: absolute;
+    right:0px;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    box-sizing: border-box;
+    opacity: 1;
+    text-align: center;
+    transform-origin: inherit;
+    /* background-image: url('assets/bg3.jpg');
+    background-size: contain;
+    background-position-y:-3px;
+    background-repeat: repeat-y;  */
+
+
+}
+
+
+ .s1{
+    
+    background-color: var(--col);
+
+    
+}
+.s2{
+    transform: rotateY(90deg);
+    background-color: orange;
+}
+.s3 {
+    
+    transform: rotateY(180deg) ;
+    background-color: red; 
+}
+.s4 {
+    
+    transform:rotateY(270deg) ;
+    background-color: blue; 
+
+}
+
+
+@media (max-width: 768px) {
+    #section-one .container {
+        top: 0;
+        bottom: unset;
+    }
+    .b-btn{
+        width: 100%;
+        height: 6em;
+        border-style: solid;
+    }
+}
