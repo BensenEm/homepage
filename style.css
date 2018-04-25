@@ -133,10 +133,12 @@ font-size: 40px;
     min-height: 40em;
     top: -50%;
     left: 50%;
+    padding-top: 4em;
     background-color:var(--four1);
     transform: translateX(-50%) translateY(-50%);
     transition: all .3s ease;
     transition-delay: .5s;
+    
     
     
 }
@@ -325,11 +327,64 @@ input:focus::placeholder, textarea:focus::placeholder{
 }
 .b-btn:hover{
     color: var(--four1);
-    transition-delay: color .3s;
+    border: dashed;
+    _transition-delay: color .3s;
 }
 .b-btn:hover::after, .b-btn:active::after{
-    width: 160%;
+    width: 190%;
 }
+
+/* SEND OUT ANIMATION */
+#letter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    perspective: 10px;
+    perspective-origin: top left;
+    z-index: 100;
+}
+#letter path{
+    stroke-width: 10px;
+    stroke: black;
+    stroke-linecap: round;
+    transition: all 5s ease;
+    transform-style: preserve-3d;
+    fill: var(--four5);
+    
+}
+
+#top>path {
+    fill: var(--four4);
+    transform-origin: top;
+    transform: rotateX(180deg);
+}
+
+#right>path{
+    transform: rotateY(-90deg);
+}
+#left{
+    transform-origin: left;
+    transform: rotateY(90deg);
+}
+#bottom{
+    transform-origin: bottom;
+    transform: rotateX(-90deg);
+}
+#letter.send #top path{
+    transform: rotateX(0deg);
+}
+#letter.send #bottom{
+    transform: rotateX(0deg);
+}
+#letter.send #left{
+    transform: rotateX(0deg);
+}
+#letter.send #right path{
+    transform: rotateX(0deg);
+}
+
+
+
 
 /* MAP */
 

@@ -64,6 +64,9 @@ $('#mail-button').click(function() {
   $('#section-one').addClass('slide-in');
 })
 
+/* SEND ENVELOPE EFFECT */
+$('#letter').hover(function(){$('#letter').addClass('send')}, function(){ $('#letter').removeClass('send')});
+
 /* WAYPOINTS */
 var waypoint = new Waypoint({
     element: document.getElementById('section-one'),

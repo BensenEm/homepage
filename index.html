@@ -22,14 +22,14 @@
 
 <body>
     <div id="background">
-        <svg width="100%" height="100%" preserveAspectRatio="xMaxYMax slice" viewBox="0 0 400 400"  version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-            xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+        <svg width="100%" height="100%" preserveAspectRatio="xMaxYMax slice" viewBox="0 0 400 400" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
             <defs>
-                <pattern id="pattern4" x="0" y="0" width="10" height="10"  patternUnits="userSpaceOnUse">
+                <pattern id="pattern4" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
                     <path d="M 0 0 L 50 50 L 100 100 L 150 150 L 200 200" style="stroke:black; stroke-width:1px"></path>
                 </pattern>
             </defs>
-            <rect y="0" x="0" width="100%" height="100%"  fill="url(#pattern4)">
+            <rect y="0" x="0" width="100%" height="100%" fill="url(#pattern4)">
         </svg>
 
     </div>
@@ -55,7 +55,8 @@
   -->
         <div class="front-content">
             <div id="intro">
-                <span id="anim1">buzz</span><span id="anim2">em</span>
+                <span id="anim1">buzz</span>
+                <span id="anim2">em</span>
                 <p>Webdevelopment</p>
             </div>
             <div id="mail-button">
@@ -69,6 +70,17 @@
     </div>
 
     <section id="section-one">
+        <svg id="letter" width="100%" height="100%" viewBox="-4 -4 1032 1032" version="1.1" 
+            xml:space="preserve"  preserveAspectRatio="none" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+            <path id="left" d="M0,1024L720,576L720,432L0,0L0,1024Z" />
+            <g id="right" transform="matrix(-0.688889,0,0,1,1024,0)">
+                <path d="M0,1024L743.226,576L743.226,432L0,0L0,1024Z" />
+            </g>
+            <path id="bottom" d="M0,1024L1024,1024L512,468L0,1024Z" />
+            <g id="top" transform="matrix(1,0,0,1,-15,0)">
+                <path d="M15,0L15,144L527,600L1038,144L1038,0L15,0Z" />
+            </g>
+        </svg>
         <form action="submit">
             <div class="send-button p-5 d-none d-md-block">
                 <button class="b-btn"> Send</button>
@@ -136,8 +148,14 @@
             </div>
 
         </form>
+        <div>
+            <div class="letter left"></div>
+            <div class="letter top"></div>
+            <div class="letter right"></div>
+            <div class="letter bottom"></div>
+        </div>
     </section>
-  <!--   <section id="section-two" class="section-two">
+    <!--   <section id="section-two" class="section-two">
 
         <div class="container">
             <div class="row">
