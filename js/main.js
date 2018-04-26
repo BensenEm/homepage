@@ -65,7 +65,15 @@ $('#mail-button').click(function() {
 })
 
 /* SEND ENVELOPE EFFECT */
-$('#letter').hover(function(){$('#letter').addClass('send')}, function(){ $('#letter').removeClass('send')});
+$('.b-btn').hover(function(){$('#letter').addClass('send')}, function(){ $('#letter').removeClass('send')});
+
+/* RETURN FROM MAIL Effect*/
+$('#leaveLetterIcon, #leaveLetterIcon2').click(function(){
+  $('#section-one').removeClass('slide-in');
+  timeoutID = window.setTimeout(function(){
+  $('.front-content').removeClass('slide-out')}, 1000);
+});
+
 
 /* WAYPOINTS */
 var waypoint = new Waypoint({
