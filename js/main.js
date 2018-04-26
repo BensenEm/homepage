@@ -61,17 +61,30 @@ $('input, textarea').focus(function()
 /* MAIL BUTTON EFFECT*/
 $('#mail-button').click(function() {
   $('.front-content').addClass('slide-out');
-  $('#section-one').addClass('slide-in');
-})
+  var frontSlideBack = window.setTimeout(function(){
+    $('#section-one').addClass('slide-in');
+/*     $('#leaveLetterIcon').addClass('slide-in');
+ */  }, 300);
+});
 
-/* SEND ENVELOPE EFFECT */
-$('.b-btn').hover(function(){$('#letter').addClass('send')}, function(){ $('#letter').removeClass('send')});
 
 /* RETURN FROM MAIL Effect*/
+
+$('.b-btn').click(function(){
+  $('#section-one').css({transform:"translateX(100%) translateY(-50%)"});
+  var frontSlideBack = window.setTimeout(function(){
+    $('#section-one').css({transform:"translateX(-50%) translateY(-50%)"});
+    $('#section-one').removeClass('slide-in');
+    $('.front-content').removeClass('slide-out');
+  }, 1000);  
+})
+
 $('#leaveLetterIcon, #leaveLetterIcon2').click(function(){
   $('#section-one').removeClass('slide-in');
-  timeoutID = window.setTimeout(function(){
+  //$('#leaveLetterIcon').removeClass('slide-in');
+  var frontSlideBack = window.setTimeout(function(){
   $('.front-content').removeClass('slide-out')}, 1000);
+
 });
 
 

@@ -350,11 +350,16 @@ input:focus::placeholder, textarea:focus::placeholder{
     margin: 15px;  
     fill: var(--four1);
     stroke: var(--four5);
-}
+/*     transform: translateY(-100px);
+ */}
+/* #leaveLetterIcon.slide-in{
+    transform: translateY(0px);
+} */
+
 #leaveLetterIcon2{
     position: relative;
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     margin:0;
     _border: 1px solid green;
     
@@ -364,16 +369,16 @@ input:focus::placeholder, textarea:focus::placeholder{
     fill: var(--four5);
     stroke: var(--four1);
 }
-#leaveLetterIcon path{
+#leaveLetterIcon path, #leaveLetterIcon2 path{
     stroke: var(--four5);
 }
-#leaveLetterIcon:hover path{
+#leaveLetterIcon:hover path, #leaveLetterIcon2:hover path{
     stroke: var(--four1);
 }
 /* SEND OUT ANIMATION */
 #letter {
     position: absolute;
-    display: block;
+    display: none;
     top: 0;
     left: 0;
     perspective: 10px;
@@ -384,7 +389,7 @@ input:focus::placeholder, textarea:focus::placeholder{
     stroke-width: 10px;
     stroke: black;
     stroke-linecap: round;
-    transition: all .3s ease;
+    transition: all 2s ease;
     fill: var(--four5);
     
 }
