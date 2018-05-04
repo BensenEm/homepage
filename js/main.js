@@ -70,14 +70,14 @@ $('#mail-button').click(function() {
 
 /* RETURN FROM MAIL Effect*/
 
-$('.b-btn').click(function(){
+/* $('.b-btn').click(function(){
   $('#section-one').css({transform:"translateX(100%) translateY(-50%)"});
   var frontSlideBack = window.setTimeout(function(){
     $('#section-one').css({transform:"translateX(-50%) translateY(-50%)"});
     $('#section-one').removeClass('slide-in');
     $('.front-content').removeClass('slide-out');
   }, 1000);  
-})
+}) */
 
 $('#leaveLetterIcon, #leaveLetterIcon2').click(function(){
   $('#section-one').removeClass('slide-in');
@@ -87,6 +87,13 @@ $('#leaveLetterIcon, #leaveLetterIcon2').click(function(){
 
 });
 
+/* Flip Flipcard  */
+$('#flipFlipcard').click(function(){
+  $('#flipcard').css({transform:"rotateY(180deg)"});
+/*   $('.frontside').css({display:"none"});*/
+  $('.backside').css({'z-index':"100"});
+
+});
 
 /* WAYPOINTS */
 var waypoint = new Waypoint({

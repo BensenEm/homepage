@@ -1,20 +1,5 @@
 
 :root {
-    /* Paletton */
---random-1:  rgb(1, 2, 39);   
---random-2: rgb(252, 241, 220); 
---primary-0: rgba(255,170,  0,1); 	/* Main Primary color */
---primary-1: rgba(255,203, 99,1); 
---primary-2: rgba(255,189, 57,1); 
---primary-3: rgba(197,131,  0,1); 
---primary-4: rgba(155,103,  0,1); 
-
---complement-0: rgba( 18, 64,171,1);	/* Main Complement color */
---complement-1: rgba( 87,119,192,1);
---complement-2: rgba( 54, 91,176,1);
---complement-3: rgba( 13, 49,132,1);
---complement-4: rgba(  8, 37,104,1);
-
 --four1: #e63946;
 --four2: #f1faee;
 --four3:#a8dadc;
@@ -37,38 +22,28 @@ body {
     position: fixed;
     width: 100%;
     height: 100vh;
-    z-index: 00;
+    z-index: 0;
     overflow: hidden;
 }
 .landing-intro{
-    position: relative;
+    _position: relative;
     height: 100vh;
+    background-color: var(--four5);
 }
-#header{
-    display: none;
-    position:fixed;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    z-index: 5;
-    width: 100%;
-    background-color: var(--random-1);
-    height: 5vh;
-    min-height: 60px;
-    top: 0;
-}
-#navigation{
+
+/* #navigation{
     text-align: right;
 }
 nav a {
     margin-left: 1em;
-}
-.front-content.slide-out{
+} */
+/* .front-content.slide-out{
     transform: translateY(-100%);
 }
 
 .front-content {
     height: 100%;
-    position: relative;
+    _position: relative;
     background-color: var(--four5);
     opacity: 1;
     background-repeat: no-repeat;
@@ -76,7 +51,7 @@ nav a {
     transition: all .3s ease;
     z-index: 20;
     transform: translateY(0%);
-}
+} */
 
 
 
@@ -130,44 +105,70 @@ font-size: 40px;
 }
 
 #section-one{
-    position: absolute;
-    width: 80vw;
-    height: 80vh;
+    position: relative;
+    
     min-height: 40em;
-    top: -50%;
-    left: 50%;
-    padding-top: 4em;
-    background-color:var(--four1);
-    transform: translateX(-50%) translateY(-50%);
+    /* top: -50%;
+    left: 50%; */
+    background-color: transparent;
+    _transform: translateX(-50%) translateY(-50%);
     transition: all .3s ease;
     transition-delay: .5s;
     
     
     
 }
-#section-one.slide-in{
+/* #section-one.slide-in{
     top: 50%;
     _overflow: scroll;
-}
-#section-one .container{
+} */
+/* #section-one .container{
     position: absolute;
     bottom: 0; 
     right: 0; 
     width: 100%;
+} */
+
+#cardcontainer{
+    position: static;
+    padding: 4em;
+}
+#flipcard{
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all .3s ease-in-out;
+    transform-origin: 50% 50%;    
+   _backface-visibility: hidden;
+    perspective: 900px;
+
+
 }
 
+.backside, .frontside{
+    position: absolute;
+    width: 100%;
+    background-color: var(--four1);
+}
+.backside{
+    transform: rotateY(180deg);
+}
+.frontside{
+    background-color: var(--four4);
+    height: 200px;
+    _transform: rotateY(0deg);
+}
+.backside, .backside div, .backside label, h1, .backside button, .frontside, .frontside div{
+    backface-visibility: hidden;
 
-form.container{
 }
 .send-button{
-    position: absolute;
-    top: 0;
-    right: 0;
+    position: relative;
     overflow: visible;
 }
 .title{
     display: flex;
     flex-direction: row;
+
     justify-content: space-between;
     width:100%;
     _border: 1px dotted var(--four5);
@@ -176,6 +177,7 @@ form.container{
 #section-one h1{
     display: inline-block;
     margin-bottom: .5em;
+    backface-visibility: hidden;
     text-transform: uppercase;
 }
 
@@ -294,8 +296,8 @@ input:focus::placeholder, textarea:focus::placeholder{
 /* TEXT OF BUTTONS*/
 .b-btn{
     font-size: 2em;
-    width: 5em;
-    height: 5em;
+    width: 4em;
+    height: 4em;
     font-family: 'Arvo', serif;
     background: none;
     overflow: hidden;
@@ -363,6 +365,7 @@ input:focus::placeholder, textarea:focus::placeholder{
     height: 40px;
     margin:0;
     _border: 1px solid green;
+    display: none;
     
 }
 #leaveLetterIcon:hover, #leaveLetterIcon2:hover{
@@ -572,27 +575,27 @@ div.thefront.mj{
     #intro{
         font-size: 20px;
     }
-    #section-one {
+   /*  #section-one {
         width:100%;
         height:100%;
         _transform: translateY(-100%);
 
-    }
+    } */
     #leaveLetterIcon{
         display: none;
     }
     #letter{
         display: none;
     }
-    #section-one .container {
+   /*  #section-one .container {
         position: absolute;
-        height:auto;
+        height:100%;
         border: palegreen dotted 4px;
-        top:0;
+        top:0; */
 
         /* top: 0;
-        bottom: unset; */
-    }
+        bottom: unset; 
+   }*/
     .landing-intro {
         position: relative;
         _height: auto;
