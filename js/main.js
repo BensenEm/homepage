@@ -109,11 +109,14 @@ var updateSectionOneSize = function() {
     var height_front = $('.frontside').height();
     var padding_front = parseInt($('.frontside').css("padding-top"));
     flipcardAtFrontside = !flipcardAtFrontside;
+    $('.backside').css({display:"none"});
   }
   else {
+    $('.backside').css({display:"block"});
     var height_front = $('.backside').height();
     var padding_front = parseInt($('.backside').css("padding-top"));
     flipcardAtFrontside = !flipcardAtFrontside;
+
   }
   var padding_card = parseInt($('#cardcontainer').css("padding-top"));
   console.log(padding_front);
@@ -121,7 +124,10 @@ var updateSectionOneSize = function() {
   console.log(totalHeight_sectionOne);
   $('#section-one').css({height: totalHeight_sectionOne});};
 
-  document.addEventListener('DOMContentLoaded', updateSectionOneSize(), false);
+  document.addEventListener('DOMContentLoaded', function(){
+    $('.backside').css({display:"none"});
+    updateSectionOneSize();}
+    , false);
   
 
 

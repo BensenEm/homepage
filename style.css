@@ -78,7 +78,9 @@ font-size: 40px;
 
 
 #section-one{
+    position: relative;
     background-color: transparent;
+    z-index: 10;
 }
 
 #cardcontainer{
@@ -87,29 +89,44 @@ font-size: 40px;
 
 #flipcard{
     position: relative;
+   
+    -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
+
+    -webkit-transition: all .8s ease-in-out;
     transition: all .8s ease-in-out;
+    
+    -webkit-transform-origin: 50% 50%;    
     transform-origin: 50% 50%;    
+    
+    -webkit-perspective: 2000px;
     perspective: 2000px;
 }
 
 .backside, .frontside{
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    
+    -webkit-transform-style: inherit;
+    transform-style: inherit;
+
     position: absolute;
     width: 100%;
     background-color: var(--four1);
-    transform-style: inherit;
     padding: 2em;
     color: black;
     overflow: hidden;
 }
 .backside{
+    -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
+   
     z-index: 30;
 }
 .frontside{
     background-color: var(--four2);
     min-height: 500px;
+    -webkit-z-index: 20;
     z-index: 20;
 }
 .front-side a:hover {
@@ -283,35 +300,15 @@ button:focus {
     font-size: 1.1em;
     border: 0px dotted var(--four1);
     transform: translateY(0%);
-
-    
 }
 .input--ben:focus>.content--ben{
     line-height: 2em;
-
 }
-
 
 input, textarea {
     padding-top:1.75em;
     margin-bottom: .4em;
-
-}/*
-input:focus, textarea:focus{
-    padding-top: 1em !important;
-    padding-bottom: 1em !important;
-    font-size: 1.2em;
 }
-input::placeholder, textarea::placeholder{
-    font-size: 1em;
-    transition: all 2s ease;
-}
-input:focus::placeholder, textarea:focus::placeholder{
-    font-size: 1.2em;
-    
-} */
-
-
 /* TEXT OF BUTTONS*/
 .b-btn{
     font-size: 2em;
@@ -363,97 +360,12 @@ input:focus::placeholder, textarea:focus::placeholder{
     width: 190%;
 }
 
-#leaveLetterIcon, #leaveLetterIcon2{
-    position: absolute; 
-    top:0;
-    left: 0;   
-    width: 50px;
-    height: 50px;
-    margin: 15px;  
-    fill: var(--four1);
-    stroke: var(--four5);
-/*     transform: translateY(-100px);
- */}
-/* #leaveLetterIcon.slide-in{
-    transform: translateY(0px);
-} */
-
-#leaveLetterIcon2{
-    position: relative;
-    width: 40px;
-    height: 40px;
-    margin:0;
-    _border: 1px solid green;
-    display: none;
-    
-}
-#leaveLetterIcon:hover, #leaveLetterIcon2:hover{
-    cursor: pointer;
-    fill: var(--four5);
-    stroke: var(--four1);
-}
-#leaveLetterIcon path, #leaveLetterIcon2 path{
-    stroke: var(--four5);
-}
-#leaveLetterIcon:hover path, #leaveLetterIcon2:hover path{
-    stroke: var(--four1);
-}
-/* SEND OUT ANIMATION */
-#letter {
-    position: absolute;
-    display: none;
-    top: 0;
-    left: 0;
-    perspective: 10px;
-    perspective-origin: top left;
-    z-index: 100;
-}
-#letter path{
-    stroke-width: 10px;
-    stroke: black;
-    stroke-linecap: round;
-    transition: all 2s ease;
-    fill: var(--four5);
-    
-}
-
-#top>path {
-    fill: var(--four4);
-    transform-origin: top;
-    transform: rotateX(90deg);
-}
-
-#right>path{
-    transform: rotateY(-90deg);
-}
-#left{
-    transform-origin: left;
-    transform: rotateY(90deg);
-}
-#bottom{
-    transform-origin: bottom;
-    transform: rotateX(-90deg);
-}
-.send{
-}
-#letter.send #top path{
-    transform: rotateX(0deg);
-}
-#letter.send #bottom{
-    transform: rotateX(0deg);
-}
-#letter.send #left{
-    transform: rotateX(0deg);
-}
-#letter.send #right path{
-    transform: rotateX(0deg);
-}
 
 #footer{
     position: relative;
     color:var(--four2);
     height: 200px;
-    background-color: var(--four4);
+    background-color: var(--four5);
 }
 
 
@@ -473,126 +385,6 @@ input:focus::placeholder, textarea:focus::placeholder{
     
 }
 
-.card-holder{
-    min-width: 150px;
-    height: 400px;
-    min-height: 250px;
-    margin: 0 auto;
-    position: relative;
-    perspective: 500px;
-    overflow: unset;
-    
-}
-
-.karte{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    transform-style: preserve-3d;
-    transition: all .3s ease-in-out;
-    transform-origin: 50% 50%;
-    overflow: inherit;
-    
-    
-    backface-visibility: hidden;
-}
-
-
-.thefront{
-}
-.theback{
-    transform: rotateY(180deg);
-}
-.karte:hover{
-    transform: rotateY(30deg);
-}
-
- div.theback.bb{
-    background-image: url("assets/bb1.png");
-}
-div.thefront.bb{
-    background-image: url("assets/bb2.png");
-}
-div.theback.mj{
-    background-image: url("assets/mj1.png");
-}
-div.thefront.mj{
-    background-image: url("assets/mj2.png");
-} 
-
-.thefront, .theback{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    border: 3px blueviolet solid;
-    background-size: cover;
-    
-}
-.cube-wrapper{
-    perspective: 800px; /* Must be set on parent*/
-    width: 500px;
-    height: 500px;
-    border: thick ridge red;
-
-}
-.cube {    
-    margin: 100px auto;
-    width: 200px;
-    height:200px;
-    position: relative;
-    transition: all .3s ease-in-out;
-    overflow: unset;
-    backface-visibility: hidden;
-    perspective-origin: 50% 50%;
-    transform-style: preserve-3d;
-    transform-origin: 50% 50% -100px;
-    
-}
-.cube:hover{
-
-
-}
-.s1, .s2, .s3, .s4 {
-    position: absolute;
-    right:0px;
-    padding: 10px;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    box-sizing: border-box;
-    opacity: 1;
-    text-align: center;
-    transform-origin: inherit;
-    /* background-image: url('assets/bg3.jpg');
-    background-size: contain;
-    background-position-y:-3px;
-    background-repeat: repeat-y;  */
-
-
-}
-
-
- .s1{
-    
-    background-color: var(--col);
-
-    
-}
-.s2{
-    transform: rotateY(90deg);
-    background-color: orange;
-}
-.s3 {
-    
-    transform: rotateY(180deg) ;
-    background-color: red; 
-}
-.s4 {
-    
-    transform:rotateY(270deg) ;
-    background-color: blue; 
-
-}
 
 
 @media (max-width: 768px) {
@@ -601,9 +393,6 @@ div.thefront.mj{
     }
     #cardcontainer{
         padding: 1em;
-    }
-    #leaveLetterIcon{
-        display: none;
     }
     .frontside #berlin, .frontside #marker{
         position: absolute;
@@ -615,7 +404,6 @@ div.thefront.mj{
         margin-left: 2em;
     }
    
-  
     .landing-intro {
         position: relative;
         _height: auto;
@@ -627,18 +415,6 @@ div.thefront.mj{
     }
 }
 @media (min-width: 768.02px) {
-    #leaveLetterIcon2{
-        display: none;
-    }
+
 }
 
-a:hover{
-    color: #e63946;
-}
-.unselectable {
-    -moz-user-select: -moz-none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    -o-user-select: none;
-    user-select: none;
-}
