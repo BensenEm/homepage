@@ -23,6 +23,7 @@ body {
     _background-color: var(--four3);
     color: var(--four2);
     font-family: 'Arvo', serif;
+    height: auto;
 }
 #background{
     position: fixed;
@@ -36,29 +37,6 @@ body {
     height: 100vh;
     background-color: var(--four5);
 }
-
-/* #navigation{
-    text-align: right;
-}
-nav a {
-    margin-left: 1em;
-} */
-/* .front-content.slide-out{
-    transform: translateY(-100%);
-}
-
-.front-content {
-    height: 100%;
-    _position: relative;
-    background-color: var(--four5);
-    opacity: 1;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: all .3s ease;
-    z-index: 20;
-    transform: translateY(0%);
-} */
-
 
 
 #intro{
@@ -96,80 +74,68 @@ font-size: 40px;
     color: var(--four4);
     position: relative;
 }
-#mail-button{
-    position: absolute;
-    bottom: 1em;
-    left: 50%;
-    transform: translateX(-50%);
-}
-#mail-button path{
-    fill: var(--four4);
-}
-#mail-button:hover path{
-    cursor: pointer;
-    fill:var(--four2);
-}
+
+
 
 #section-one{
-    position: relative;
-    
-    min-height: 40em;
-    /* top: -50%;
-    left: 50%; */
     background-color: transparent;
-    _transform: translateX(-50%) translateY(-50%);
-    transition: all .3s ease;
-    transition-delay: .5s;
-    
-    
-    
 }
-/* #section-one.slide-in{
-    top: 50%;
-    _overflow: scroll;
-} */
-/* #section-one .container{
-    position: absolute;
-    bottom: 0; 
-    right: 0; 
-    width: 100%;
-} */
 
 #cardcontainer{
-    position: static;
     padding: 4em;
 }
+
 #flipcard{
     position: relative;
     transform-style: preserve-3d;
-    transition: all .3s ease-in-out;
+    transition: all .8s ease-in-out;
     transform-origin: 50% 50%;    
-    backface-visibility: hidden;
-    perspective: 900px;
-
-
+    perspective: 2000px;
 }
 
 .backside, .frontside{
+    backface-visibility: hidden;
     position: absolute;
     width: 100%;
     background-color: var(--four1);
-    transform-style: preserve-3d;
+    transform-style: inherit;
     padding: 2em;
-    padding-bottom: 8em;
     color: black;
-}
-.backside a:hover, .front-side a:hover {
-    color:var(--four1);
+    overflow: hidden;
 }
 .backside{
     transform: rotateY(180deg);
+    z-index: 30;
 }
 .frontside{
     background-color: var(--four2);
-    
-    _transform: rotateY(0deg);
+    min-height: 500px;
+    z-index: 20;
 }
+.front-side a:hover {
+    color:var(--four1);
+}
+.frontside #berlin, .frontside #marker{
+    position: absolute;
+    left:-100px; 
+    top: center;
+}
+.frontside #berlin{
+    opacity: .2;
+}
+.frontside #marker .yo:hover{
+    fill: var(--four1);
+    cursor: pointer; 
+}
+
+.frontside #text {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin: 2em;
+    margin-left: 0;
+}
+
 
 .frontside #flipFlipcard {
     width: 100%;
@@ -177,7 +143,6 @@ font-size: 40px;
     transform: translateX(-50%);
     margin-top: 2em;
     border: solid;
-    _margin-bottom: 2em;
 }
 .frontside .b-btn::after{
     content: '';
@@ -198,10 +163,24 @@ font-size: 40px;
 .frontside .b-btn:hover{
     color: var(--four5);
 }    
-.backside, .backside div, .backside label, h1, .backside button, .frontside, .frontside div{
-    backface-visibility: hidden;
-    
 
+.backside h1{
+    color: var(--four2);
+}
+.backside #x-icon{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top:0;
+    right:0;
+}
+.backside #x-icon #x {
+    stroke-width: 5;
+    stroke: var(--four2);
+}
+.backside #x-icon:hover #x{
+    stroke: var(--four5);
+    cursor: pointer;
 }
 .send-button{
     position: relative;
@@ -210,10 +189,8 @@ font-size: 40px;
 .title{
     display: flex;
     flex-direction: row;
-
     justify-content: space-between;
     width:100%;
-    _border: 1px dotted var(--four5);
     padding-right: 15px;
 }
 #section-one h1{
@@ -227,7 +204,6 @@ input, textarea {
     font-family: 'Arvo', serif;
     padding: .2em;
     font-size: 1.25em;
-    transform-style: preserve-3d;
 
 }
 input:focus,
@@ -473,7 +449,12 @@ input:focus::placeholder, textarea:focus::placeholder{
     transform: rotateX(0deg);
 }
 
-
+#footer{
+    position: relative;
+    color:var(--four2);
+    height: 200px;
+    background-color: var(--four4);
+}
 
 
 /* MAP */
@@ -618,31 +599,23 @@ div.thefront.mj{
     #intro{
         font-size: 20px;
     }
-   /*  #section-one {
-        width:100%;
-        height:100%;
-        _transform: translateY(-100%);
-
-    } */
     #cardcontainer{
-        position: static;
         padding: 1em;
     }
     #leaveLetterIcon{
         display: none;
     }
-    #letter{
-        display: none;
-    }
-   /*  #section-one .container {
+    .frontside #berlin, .frontside #marker{
         position: absolute;
-        height:100%;
-        border: palegreen dotted 4px;
-        top:0; */
-
-        /* top: 0;
-        bottom: unset; 
-   }*/
+        left:30px; 
+        top: center;
+    }
+    .frontside #text{
+        left: 0;
+        margin-left: 2em;
+    }
+   
+  
     .landing-intro {
         position: relative;
         _height: auto;
@@ -662,20 +635,10 @@ div.thefront.mj{
 a:hover{
     color: #e63946;
 }
-h1:hover{
-    color: firebrick;
-}
 .unselectable {
     -moz-user-select: -moz-none;
     -khtml-user-select: none;
     -webkit-user-select: none;
     -o-user-select: none;
     user-select: none;
-}
-.yo{
-    transition: all 3s ease;
-}
-#marker:hover .yo{
-    fill: var(--four1);
-    cursor: pointer;    
 }
