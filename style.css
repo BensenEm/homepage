@@ -12,7 +12,13 @@
     border: 4px dotted yellowgreen;
     color: greenyellow;
 }
-
+a{
+    color: black;
+}
+a:hover {
+    color: var(--four1);
+    text-decoration: none;
+}
 body {
     _background-color: var(--four3);
     color: var(--four2);
@@ -138,7 +144,7 @@ font-size: 40px;
     transform-style: preserve-3d;
     transition: all .3s ease-in-out;
     transform-origin: 50% 50%;    
-   _backface-visibility: hidden;
+    backface-visibility: hidden;
     perspective: 900px;
 
 
@@ -148,17 +154,53 @@ font-size: 40px;
     position: absolute;
     width: 100%;
     background-color: var(--four1);
+    transform-style: preserve-3d;
+    padding: 2em;
+    padding-bottom: 8em;
+    color: black;
+}
+.backside a:hover, .front-side a:hover {
+    color:var(--four1);
 }
 .backside{
     transform: rotateY(180deg);
 }
 .frontside{
-    background-color: var(--four4);
-    height: 200px;
+    background-color: var(--four2);
+    
     _transform: rotateY(0deg);
 }
+
+.frontside #flipFlipcard {
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 2em;
+    border: solid;
+    _margin-bottom: 2em;
+}
+.frontside .b-btn::after{
+    content: '';
+    transition: all .6s;    
+    position: absolute;
+    top:-180px;
+    left:-50px;
+    transform: rotate(-15deg);
+    height:400%;
+    width:0;
+    color: var(--four1);
+    background-color: var(--four2);
+    z-index: -1;
+}
+.frontside .b-btn:hover::after, .front-side .b-btn:active::after{
+    width: 160%;
+}
+.frontside .b-btn:hover{
+    color: var(--four5);
+}    
 .backside, .backside div, .backside label, h1, .backside button, .frontside, .frontside div{
     backface-visibility: hidden;
+    
 
 }
 .send-button{
@@ -185,6 +227,7 @@ input, textarea {
     font-family: 'Arvo', serif;
     padding: .2em;
     font-size: 1.25em;
+    transform-style: preserve-3d;
 
 }
 input:focus,
@@ -581,6 +624,10 @@ div.thefront.mj{
         _transform: translateY(-100%);
 
     } */
+    #cardcontainer{
+        position: static;
+        padding: 1em;
+    }
     #leaveLetterIcon{
         display: none;
     }
@@ -610,4 +657,25 @@ div.thefront.mj{
     #leaveLetterIcon2{
         display: none;
     }
+}
+
+a:hover{
+    color: #e63946;
+}
+h1:hover{
+    color: firebrick;
+}
+.unselectable {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.yo{
+    transition: all 3s ease;
+}
+#marker:hover .yo{
+    fill: var(--four1);
+    cursor: pointer;    
 }
