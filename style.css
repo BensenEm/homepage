@@ -1,7 +1,7 @@
 
 :root {
 --four1: #e63946;
---four2: #f1faee;
+--four2: rgb(241, 250, 238);
 --four3:#a8dadc;
 --four4: #457b9d;
 --four5: #1d3557;
@@ -20,7 +20,6 @@ a:hover {
     text-decoration: none;
 }
 body {
-    _background-color: var(--four3);
     color: var(--four2);
     font-family: 'Arvo', serif;
     height: auto;
@@ -33,7 +32,6 @@ body {
     overflow: hidden;
 }
 .landing-intro{
-    _position: relative;
     height: 100vh;
     background-color: var(--four5);
 }
@@ -59,7 +57,7 @@ font-size: 40px;
     font-size: 1em;
 }
 #anim1, #anim2{
-    font-size: 3em;
+    font-size: 2em;
     
 }
 
@@ -128,6 +126,7 @@ font-size: 40px;
     min-height: 500px;
     -webkit-z-index: 20;
     z-index: 20;
+    _border: 11px solid var(--four5);
 }
 .front-side a:hover {
     color:var(--four1);
@@ -138,10 +137,16 @@ font-size: 40px;
     top: center;
 }
 .frontside #berlin{
-    opacity: .2;
+    opacity: .6;
 }
-.frontside #marker .yo:hover{
-    fill: var(--four1);
+.frontside #marker{
+}
+.frontside #marker:hover .yo{
+   /*  -webkit-transform-origin: 60,71% 48,65%;
+    transform-origin: 60,71% 48,65%;
+    -webkit-transform: rotate(10);
+    transform: rotate(10);
+    */ fill: var(--four1);
     cursor: pointer; 
 }
 
@@ -149,8 +154,11 @@ font-size: 40px;
     position: absolute;
     bottom: 0;
     left: 50%;
+    padding: 1em;
     margin: 2em;
     margin-left: 0;
+    background: linear-gradient(to left, rgba(241, 250, 238, .1), rgba(241, 250, 238, .8));
+    
 }
 
 
@@ -364,7 +372,7 @@ input, textarea {
 #footer{
     position: relative;
     color:var(--four2);
-    height: 200px;
+    height: 100px;
     background-color: var(--four5);
 }
 
