@@ -12,16 +12,29 @@ $anim1.hover(
     function(){ $(this).trigger('startRumble');}, 
     function(){$(this).trigger('stopRumble');},
 );
-
 $anim2 = $('#anim2').jrumble({
-    y:1,
-    x:10
-})
+  y:1,
+  x:10
+});
 $anim2.hover(function(){
-    $(this).trigger('startRumble');
-    setTimeout(function(){ 
-        $anim2.trigger('stopRumble')}, 1500)
-})
+  $(this).trigger('startRumble');
+  setTimeout(function(){ 
+      $anim2.trigger('stopRumble')}, 1500)
+});
+
+
+/* ANIMATION ON LOAD */
+window.onload = function(){
+  $anim1.trigger('startRumble');
+  setTimeout(function(){ 
+    $anim1.trigger('stopRumble')}, 1500);
+  setTimeout(function(){ 
+    $anim2.trigger('startRumble')}, 1500);
+  setTimeout(function(){
+    $anim2.trigger('stopRumble')}, 3000)}; 
+
+
+
 
 /* INPUT FORMS FILLED */
 function toggleFill(elem, turnOn){
