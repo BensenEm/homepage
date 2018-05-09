@@ -421,8 +421,42 @@ input, textarea {
         height: 6em;
         border-style: solid;
     }
-}
-@media (min-width: 768.02px) {
 
+    input, textarea { 
+        font-size: 0.75em;
+    }
+   
+    .container--ben {
+        height: 3em;        
+    }
+    .textarea{
+        height: 8em;
+    } 
+    .container--ben.filled{
+        border: 3px solid var(--four5);
+    }
+    
+     .container--ben.before {
+        height: 1em;
+    }
+    
+    .input--ben{
+        padding-left: .5em;
+        padding-bottom: .5em;
+        
+    }
+    .label--ben{
+        padding: 1em;
+        font-size: 1em;
+    }
+    .label--ben.filled{
+        padding: .45em;
+        padding-top: .1em;
+        line-height: 1em;
+        font-size: .8em;
+     }
+    .input--ben:focus>.content--ben{
+        line-height: 2em;
+    }
 }
 
