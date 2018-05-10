@@ -85,6 +85,8 @@ font-size: 40px;
 
 #cardcontainer{
     padding: 4em;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 #flipcard{
