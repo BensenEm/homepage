@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 756 755" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-miterlimit:1.5;">
+    <g id="ArtBoard1" transform="matrix(0.948503,0,0,0.947247,-94.8503,-44.5206)">
+        <rect x="100" y="47" width="796.167" height="796.167" style="fill:none;"/>
+        <g transform="matrix(1.05429,0,0,1.05569,106.853,33.9803)">
+            <g id="Ebene1">
+                <rect x="72" y="90" width="598" height="598" style="fill:none;stroke:black;stroke-width:38px;"/>
+            </g>
+        </g>
+        <g transform="matrix(0.534291,-0.534999,0.534291,0.534999,-53.3924,433.409)">
+            <path d="M505.5,170L505.5,883" style="fill:none;stroke:black;stroke-width:53.02px;stroke-linejoin:round;"/>
+        </g>
+        <g transform="matrix(0.534291,-0.534999,0.534291,0.534999,-53.3924,433.409)">
+            <path d="M149,526.5L862,526.5" style="fill:none;stroke:black;stroke-width:53.02px;stroke-linejoin:round;"/>
+        </g>
+    </g>
+</svg>

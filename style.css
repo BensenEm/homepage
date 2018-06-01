@@ -1,0 +1,467 @@
+
+:root {
+--four1: #e63946;
+--four2: rgb(241, 250, 238);
+--four3:#a8dadc;
+--four4: #457b9d;
+--four5: #1d3557;
+
+
+}
+.debug {
+    border: 4px dotted yellowgreen;
+    color: greenyellow;
+}
+a{
+    color: black;
+}
+a:hover {
+    color: var(--four1);
+    text-decoration: none;
+}
+body {
+    color: var(--four2);
+    font-family: 'Arvo', serif;
+    height: auto;
+}
+#background{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+    overflow: hidden;
+}
+.landing-intro{
+    height: 100vh;
+    position: relative;
+    background-color: var(--four5);
+    z-index: 10;
+}
+
+
+#intro{
+position: absolute;
+top: 50%;
+left: 50%;
+max-width: 90vw;
+_border: dotted 3px rosybrown;
+transform: translate(-50%, -50%);
+line-height: .9;
+-webkit-user-select: none; /* Safari */        
+-moz-user-select: none; /* Firefox */
+-ms-user-select: none; /* IE10+/Edge */
+user-select: none; /* Standard */
+text-transform: uppercase;
+font-size: 40px;    
+}
+#intro p{
+    text-align: right;
+    font-size: 1em;
+}
+#anim1, #anim2{
+    font-size: 2em;
+    
+}
+
+#anim1 {
+    color: var(--four2);
+    cursor: pointer;
+    margin-right: .1em;
+}
+#anim1:hover{
+}
+#anim2{
+    color: var(--four4);
+    position: relative;
+}
+
+
+
+#section-one{
+    position: relative;
+    background-color: transparent;
+    z-index: 10;
+}
+
+#cardcontainer{
+    padding: 4em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#flipcard{
+    position: relative;
+   
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+
+    -webkit-transition: all .8s ease-in-out;
+    transition: all .8s ease-in-out;
+    
+    -webkit-transform-origin: 50% 50%;    
+    transform-origin: 50% 50%;    
+    
+    -webkit-perspective: 2000px;
+    perspective: 2000px;
+}
+
+.backside, .frontside{
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    
+    -webkit-transform-style: inherit;
+    transform-style: inherit;
+
+    position: absolute;
+    width: 100%;
+    background-color: var(--four1);
+    padding: 2em;
+    color: black;
+    overflow: hidden;
+}
+.backside{
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+   
+    z-index: 30;
+}
+.frontside{
+    background-color: var(--four2);
+    min-height: 500px;
+    -webkit-z-index: 20;
+    z-index: 20;
+    _border: 11px solid var(--four5);
+}
+.front-side a:hover {
+    color:var(--four1);
+}
+.frontside #berlin, .frontside #marker{
+    position: absolute;
+    left:-100px; 
+    top: center;
+}
+.frontside #berlin{
+    opacity: .6;
+}
+.frontside #marker{
+}
+.frontside #marker:hover .yo{
+   /*  -webkit-transform-origin: 60,71% 48,65%;
+    transform-origin: 60,71% 48,65%;
+    -webkit-transform: rotate(10);
+    transform: rotate(10);
+    */ fill: var(--four1);
+    cursor: pointer; 
+}
+
+.frontside #text {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    padding: 1em;
+    margin: 2em;
+    margin-left: 0;
+    background: linear-gradient(to left, rgba(241, 250, 238, .1), rgba(241, 250, 238, .8));
+    
+}
+
+
+.frontside #flipFlipcard {
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 2em;
+    border: solid;
+}
+.frontside .b-btn::after{
+    content: '';
+    transition: all .6s;    
+    position: absolute;
+    top:-180px;
+    left:-50px;
+    transform: rotate(-15deg);
+    height:400%;
+    width:0;
+    color: var(--four1);
+    background-color: var(--four2);
+    z-index: -1;
+}
+.frontside .b-btn:hover::after, .front-side .b-btn:active::after{
+    width: 160%;
+}
+.frontside .b-btn:hover{
+    color: var(--four5);
+}    
+
+.backside h1{
+    color: var(--four2);
+}
+.backside #x-icon{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top:0;
+    right:0;
+}
+.backside #x-icon #x {
+    stroke-width: 5;
+    stroke: var(--four2);
+}
+.backside #x-icon:hover #x{
+    stroke: var(--four5);
+    cursor: pointer;
+}
+.send-button{
+    position: relative;
+    overflow: visible;
+}
+.title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:100%;
+    padding-right: 15px;
+}
+#section-one h1{
+    display: inline-block;
+    margin-bottom: .5em;
+    backface-visibility: hidden;
+    text-transform: uppercase;
+}
+
+input, textarea { 
+    font-family: 'Arvo', serif;
+    padding: .2em;
+    font-size: 1.25em;
+
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+.container--ben {
+    position: relative;
+    height: 4em;
+    width: 100%;
+    margin-bottom: 1em;
+    padding: 0;
+    background-color: var(--four2);
+    transition: all .4s ease;
+}
+.textarea{
+    height: 12em;
+} 
+.container--ben.filled{
+    border: 5px solid var(--four5);
+    transition: all .4s ease;
+}
+
+ .container--ben.before {
+    display: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 1.5em;
+    width: 100%;
+    background-color: var(--four5);
+    z-index: 90;
+    transition: inherit;
+}
+
+.input--ben{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: var(--four5);
+    padding-left: .75em;
+    padding-bottom: .5em;
+    
+}
+
+.input--ben::before{
+    
+}
+
+.label--ben{
+    position: absolute;
+    color: var(--four1);
+    padding: 1em;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: .4s all ease-out;
+    font-size: 1.5em;
+    z-index: 95;
+}
+.content--ben::after{
+    
+}
+.content--ben{
+    color: var(--four1);
+}
+
+.label--ben.filled{
+    top:0;
+    margin-top: 0;
+    padding: .8em;
+    padding-top: .1em;
+    line-height: 1em;
+    font-size: 1.1em;
+    border: 0px dotted var(--four1);
+    transform: translateY(0%);
+}
+.input--ben:focus>.content--ben{
+    line-height: 2em;
+}
+
+input, textarea {
+    padding-top:1.75em;
+    margin-bottom: .4em;
+}
+/* TEXT OF BUTTONS*/
+.b-btn{
+    font-size: 2em;
+    width: 4em;
+    height: 4em;
+    font-family: 'Arvo', serif;
+    background: none;
+    overflow: hidden;
+    position: relative;
+    border: var(--four5) 5px dotted;
+    color: var(--four5);
+    cursor: pointer;
+    z-index: 0;
+    border-radius: 0px;
+}
+/* BACKGROUNDCOLOR OF BUTTONS*/
+.b-btn::before{
+    content: '';
+    position: absolute;
+    _width: 100%;
+    _height: 100%;
+    left:0;
+    top:0;
+    background-color:transparent;
+    z-index: -2;
+}
+
+/*ANIMATED BACKGROUND OF BUTTONS*/
+.b-btn::after{
+    content: '';
+    transition: all .6s;    
+    position: absolute;
+    top:-100px;
+    left:-50px;
+    transform: rotate(-15deg);
+    height:400%;
+    width:0;
+    color: var(--four1);
+    background-color: var(--four5);
+    z-index: -1;
+    
+}
+.b-btn:hover{
+    color: var(--four1);
+    border: dashed;
+    _transition-delay: color .3s;
+}
+.b-btn:hover::after, .b-btn:active::after{
+    width: 190%;
+}
+
+
+#footer{
+    position: relative;
+    color:var(--four2);
+    height: 100px;
+    background-color: var(--four5);
+}
+
+
+/* MAP */
+
+#map{
+    height: 500px;
+    margin-bottom: 2em;
+}
+
+
+
+#section-two{
+    height: 100vh;
+    background-color:var(--complement-1);
+    overflow: hidden;
+    
+}
+
+
+
+@media (max-width: 768px) {
+    #intro{
+        font-size: 20px;
+    }
+    #cardcontainer{
+        padding: 1em;
+    }
+    .frontside #berlin, .frontside #marker{
+        position: absolute;
+        left:30px; 
+        top: center;
+    }
+    .frontside #text{
+        left: 0;
+        margin-left: 2em;
+    }
+   
+    .landing-intro {
+        position: relative;
+        _height: auto;
+    }
+    .b-btn{
+        width: 100%;
+        height: 6em;
+        border-style: solid;
+        border-width: 3px;
+    }
+
+    input, textarea { 
+        font-size: 0.75em;
+    }
+   
+    .container--ben {
+        height: 3em;        
+    }
+    .textarea{
+        height: 8em;
+    } 
+    .container--ben.filled{
+        border: 3px solid var(--four5);
+    }
+    
+     .container--ben.before {
+        height: 1em;
+    }
+    
+    .input--ben{
+        padding-left: .5em;
+        padding-bottom: .5em;
+        
+    }
+    .label--ben{
+        padding: 1em;
+        font-size: 1em;
+    }
+    .label--ben.filled{
+        padding: .45em;
+        padding-top: .1em;
+        line-height: 1em;
+        font-size: .8em;
+     }
+    .input--ben:focus>.content--ben{
+        line-height: 2em;
+    }
+}
+
