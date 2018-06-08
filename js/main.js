@@ -34,7 +34,11 @@ window.onload = function(){
     $anim2.trigger('stopRumble')}, 3000)}; 
 
 
+/* TOGGLE DATENSCHUTZ */
 
+$('#datenschutz svg').click(function(){
+  $('#datenschutz').css({'display':'none'});
+})
 
 /* INPUT FORMS FILLED */
 function toggleFill(elem, turnOn){
