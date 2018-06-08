@@ -34,10 +34,20 @@ window.onload = function(){
     $anim2.trigger('stopRumble')}, 3000)}; 
 
 
-/* TOGGLE DATENSCHUTZ */
+/* TOGGLE FORM FIELD*/
+$('#contact>h1').click(function(){
+  $(this).toggle();
+  $('#contact #form-container').toggle();
+}) 
+$('#contact svg#x-icon').click(function(){
+  $('#contact>h1').toggle();
+  $('#contact #form-container').toggle();
+}) 
 
-$('#datenschutz svg').click(function(){
-  $('#datenschutz').css({'display':'none'});
+/* TOGGLE IMPRESSUM */
+$('#impressum').click(function(){
+  $('#impressum>h1').toggle();
+  $('#impressum>.container').toggle();
 })
 
 /* INPUT FORMS FILLED */

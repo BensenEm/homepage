@@ -19,12 +19,16 @@ a:hover {
     color: var(--four1);
     text-decoration: none;
 }
+html{
+    font-size: 16px;
+}
 body {
     color: var(--four2);
     font-family: 'Arvo', serif;
     height: auto;
 }
 #background{
+    display: none;
     position: fixed;
     width: 100%;
     height: 100vh;
@@ -65,25 +69,82 @@ font-size: 40px;
 
 #anim1 {
     color: var(--four2);
-    cursor: pointer;
     margin-right: .1em;
 }
-#anim1:hover{
-}
+
 #anim2{
     color: var(--four4);
-    position: relative;
 }
 
 
 
-#section-one{
+#contact{
     position: relative;
-    background-color: transparent;
-    z-index: 10;
+    background-color: var(--four1);
+}
+#contact>h1 {
+    padding: 3em;
+    _display: none;
+    color: var(--four2);
+    text-align: center;
+    cursor: pointer;
+}
+#contact>h1:hover{
+    color: var(--four5);
 }
 
-#cardcontainer{
+#contact #form-container{
+    display:none;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(255,255,255,.1);
+    position: relative;
+}
+
+#contact #form-container #x-icon{
+    width: 10px;
+    height: 10px;
+    margin: 1rem;
+    fill: var(--four2);
+    stroke-width: 0px;
+}
+#contact #form-container #x-icon:hover{
+    fill: var(--four5);
+}
+
+#contact #form-container #x-icon #x {
+ 
+}
+#contact #form-container #x-icon:hover #x{
+    stroke: var(--four5);
+    cursor: pointer;
+}
+
+#impressum{
+    color: var(--four5);
+    background-color: var(--four2);
+}
+
+#impressum>h1 {
+    text-align: center;
+    padding: 3em;
+}
+#impressum>h1:hover {
+    color: var(--four1);
+    cursor: pointer;
+}
+#impressum>.container{
+    display: none;
+}
+#impressum p {
+    padding: 0;
+    margin: 0;
+}
+#impressum p.top {
+    padding-top: 1em;
+}
+
+/* #cardcontainer{
     padding: 4em;
     max-width: 1200px;
     margin: 0 auto;
@@ -106,7 +167,7 @@ font-size: 40px;
 }
 
 .backside, .frontside{
-    -webkit-backface-visibility: hidden;
+     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     
     -webkit-transform-style: inherit;
@@ -120,9 +181,8 @@ font-size: 40px;
     overflow: hidden;
 }
 .backside{
-    -webkit-transform: rotateY(180deg);
+    /* -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
-   
     z-index: 30;
 }
 .frontside{
@@ -150,7 +210,7 @@ font-size: 40px;
     transform-origin: 60,71% 48,65%;
     -webkit-transform: rotate(10);
     transform: rotate(10);
-    */ fill: var(--four1);
+    fill: var(--four1);
     cursor: pointer; 
 }
 
@@ -191,26 +251,9 @@ font-size: 40px;
 }
 .frontside .b-btn:hover{
     color: var(--four5);
-}    
+}  */  
 
-.backside h1{
-    color: var(--four2);
-}
-.backside #x-icon{
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    top:0;
-    right:0;
-}
-.backside #x-icon #x {
-    stroke-width: 5;
-    stroke: var(--four2);
-}
-.backside #x-icon:hover #x{
-    stroke: var(--four5);
-    cursor: pointer;
-}
+
 .send-button{
     position: relative;
     overflow: visible;
@@ -365,8 +408,6 @@ input, textarea {
 }
 .b-btn:hover{
     color: var(--four1);
-    border: dashed;
-    _transition-delay: color .3s;
 }
 .b-btn:hover::after, .b-btn:active::after{
     width: 190%;
@@ -380,13 +421,6 @@ input, textarea {
     background-color: var(--four5);
 }
 
-
-/* MAP */
-
-#map{
-    height: 500px;
-    margin-bottom: 2em;
-}
 
 
 
