@@ -5,6 +5,7 @@
 --four3:#a8dadc;
 --four4: #457b9d;
 --four5: #1d3557;
+--four6: #1A1A1A;
 
 
 }
@@ -13,7 +14,7 @@
     color: greenyellow;
 }
 a{
-    color: black;
+    color: var(--four2);
 }
 a:hover {
     color: var(--four1);
@@ -59,8 +60,8 @@ text-transform: uppercase;
 font-size: 40px;    
 }
 #intro p{
-    text-align: right;
-    font-size: 1em;
+    text-align: center;
+    font-size: .75em;
 }
 #anim1, #anim2{
     font-size: 2em;
@@ -81,10 +82,11 @@ font-size: 40px;
 #contact{
     position: relative;
     background-color: var(--four1);
+    padding: 5rem;
 }
-#contact>h1 {
-    padding: 3em;
+#contact>h1, #wir>h1 {
     _display: none;
+line-height: 5em;
     color: var(--four2);
     text-align: center;
     cursor: pointer;
@@ -97,44 +99,90 @@ font-size: 40px;
     display:none;
     max-width: 800px;
     margin: 0 auto;
+    padding: 1em;
     background-color: rgba(255,255,255,.1);
     position: relative;
 }
-
-#contact #form-container #x-icon{
+ #x-icon{
     width: 10px;
     height: 10px;
     margin: 1rem;
-    fill: var(--four2);
-    stroke-width: 0px;
-}
-#contact #form-container #x-icon:hover{
-    fill: var(--four5);
-}
-
-#contact #form-container #x-icon #x {
- 
-}
-#contact #form-container #x-icon:hover #x{
+    position: absolute;
     stroke: var(--four5);
+    top: 0;
+    right:0;
+}
+#x-icon:hover{
     cursor: pointer;
 }
 
+
+#contact svg#checkmark{
+    color: white;
+}
+#contact svg#checkmark #mark {
+    display: none;
+    stroke: var(--four2);
+}
+#contact svg#checkmark #outline {
+    stroke: var(--four2);
+}
+
+#impressum-wrapper {
+    background-color:rgba(0,0,0,0.85);
+    
+    width: 100%;
+    height:100%;
+    display: none;
+    position: fixed;
+    z-index: 100;
+    top:0;
+    left:0;
+}
+
 #impressum{
+    
     color: var(--four5);
     background-color: var(--four2);
+    padding: 5rem;
+    font-size: 12px;
+    max-height: 80vh;
+    max-width: 800px;
+    overflow: scroll;
+    margin: 10vh auto;
 }
 
 #impressum>h1 {
     text-align: center;
-    padding: 3em;
 }
 #impressum>h1:hover {
     color: var(--four1);
     cursor: pointer;
 }
+#impressum h2 {
+    _padding-top: .75em;
+    font-size: 18px;
+}
+#impressum h3 {
+    padding-top: .75em;
+    font-size: 15px;
+}
 #impressum>.container{
-    display: none;
+   
+}
+#impressum .imp-cont, #impressum .ds-cont{
+    padding: 1.5em 1.5em 1.5em 1.5em;
+    border-radius:4px;
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.15);
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.15);
+  
+}
+#impressum .ds-cont{
+}
+#impressum .right{
+    height: 500px;
+    overflow: scroll;
 }
 #impressum p {
     padding: 0;
@@ -143,116 +191,29 @@ font-size: 40px;
 #impressum p.top {
     padding-top: 1em;
 }
-
-/* #cardcontainer{
-    padding: 4em;
-    max-width: 1200px;
-    margin: 0 auto;
+#impressum img {
 }
 
-#flipcard{
+
+#wir{
+    _background-color: var(--four6);
+    background: url("assets/stripes.png") center no-repeat;
+    background-size: 100% auto;
+    padding: 5rem;
     position: relative;
-   
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-
-    -webkit-transition: all .8s ease-in-out;
-    transition: all .8s ease-in-out;
-    
-    -webkit-transform-origin: 50% 50%;    
-    transform-origin: 50% 50%;    
-    
-    -webkit-perspective: 2000px;
-    perspective: 2000px;
-}
-
-.backside, .frontside{
-     -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    
-    -webkit-transform-style: inherit;
-    transform-style: inherit;
-
-    position: absolute;
-    width: 100%;
-    background-color: var(--four1);
-    padding: 2em;
-    color: black;
-    overflow: hidden;
-}
-.backside{
-    /* -webkit-transform: rotateY(180deg);
-    transform: rotateY(180deg);
-    z-index: 30;
-}
-.frontside{
-    background-color: var(--four2);
-    min-height: 500px;
-    -webkit-z-index: 20;
-    z-index: 20;
-    _border: 11px solid var(--four5);
-}
-.front-side a:hover {
-    color:var(--four1);
-}
-.frontside #berlin, .frontside #marker{
-    position: absolute;
-    left:-100px; 
-    top: center;
-}
-.frontside #berlin{
-    opacity: .6;
-}
-.frontside #marker{
-}
-.frontside #marker:hover .yo{
-   /*  -webkit-transform-origin: 60,71% 48,65%;
-    transform-origin: 60,71% 48,65%;
-    -webkit-transform: rotate(10);
-    transform: rotate(10);
-    fill: var(--four1);
-    cursor: pointer; 
-}
-
-.frontside #text {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    padding: 1em;
-    margin: 2em;
-    margin-left: 0;
-    background: linear-gradient(to left, rgba(241, 250, 238, .1), rgba(241, 250, 238, .8));
     
 }
-
-
-.frontside #flipFlipcard {
-    width: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 2em;
-    border: solid;
-}
-.frontside .b-btn::after{
-    content: '';
-    transition: all .6s;    
+#wir>#stripes{
     position: absolute;
-    top:-180px;
-    left:-50px;
-    transform: rotate(-15deg);
-    height:400%;
-    width:0;
-    color: var(--four1);
-    background-color: var(--four2);
-    z-index: -1;
+    top:0;
+    left:0;
 }
-.frontside .b-btn:hover::after, .front-side .b-btn:active::after{
-    width: 160%;
+#wir>h1{
+    color: var(--four2);
 }
-.frontside .b-btn:hover{
-    color: var(--four5);
-}  */  
-
+#wir ul{
+    display: none;
+}
 
 .send-button{
     position: relative;
@@ -451,9 +412,32 @@ input, textarea {
     cursor: pointer;
 }
 
-
+#footer nav {
+    height: 100%;
+}
+#footer ul {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+}
+#footer li {
+    align-self: center;
+    list-style: none;
+    margin-left: 1em;
+    cursor: pointer;
+    color: var(--four2);
+}
+#footer li:first-child{
+    margin-left:0;
+}
 
 @media (max-width: 768px) {
+    #contact, #impressum, #wir{
+        padding: 5rem 1rem;
+
+    }
     #intro{
         font-size: 20px;
     }

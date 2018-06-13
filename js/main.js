@@ -36,7 +36,7 @@ window.onload = function(){
 
 /* TOGGLE FORM FIELD*/
 $('#contact>h1').click(function(){
-  $(this).toggle();
+  $('#contact>h1').toggle();
   $('#contact #form-container').toggle();
 }) 
 $('#contact svg#x-icon').click(function(){
@@ -45,10 +45,19 @@ $('#contact svg#x-icon').click(function(){
 }) 
 
 /* TOGGLE IMPRESSUM */
-$('#impressum').click(function(){
-  $('#impressum>h1').toggle();
-  $('#impressum>.container').toggle();
+$('#impressum #x-icon').click(function(){
+  $('#impressum-wrapper').toggle();
 })
+
+$('#footer #imp, #footer #ds').click(function(){
+  $('#impressum-wrapper').toggle();
+})
+
+/* CONFIRM DATENSCHUTZ*/
+$('#checkmark').click(function(){
+  $('#mark').toggle();
+
+});
 
 /* INPUT FORMS FILLED */
 function toggleFill(elem, turnOn){
