@@ -41,16 +41,14 @@ body {
     position: relative;
     background-color: var(--four5);
     z-index: 10;
-    _border: 1px solid greenyellow;
 }
 
-.front-content{
-    
-}
+
 #intro{
 position: absolute;
 top: 50%;
 left: 50%;
+max-width: 90vw;
 _border: dotted 3px rosybrown;
 transform: translate(-50%, -50%);
 line-height: .9;

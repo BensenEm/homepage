@@ -1,4 +1,3 @@
-  var flipcardAtFrontside = true;
 
 /* LANDING ANIMATIONS */
 $anim1 = $('#anim1').jrumble({
@@ -24,10 +23,7 @@ $anim2.hover(function(){
 
 
 /* ANIMATION ON LOAD */
-
-
 window.onload = function(){
-
   $anim1.trigger('startRumble');
   setTimeout(function(){ 
     $anim1.trigger('stopRumble')}, 1500);
@@ -202,7 +198,6 @@ $('#x-icon').click(function(){
 /*   $('.backside').css({display:"none"});
  */
 });
-
 
 
 
