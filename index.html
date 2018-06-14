@@ -15,11 +15,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
         crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Arvo:400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <script src="https://d3js.org/d3.v5.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-    <script src="js/modernizr.custom.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.js"></script>
+
+
 
 </head>
 
@@ -41,34 +42,47 @@
     <div class="landing-intro">
         <div class="front-content">
             <div id="intro">
-                <span id="anim1">buzz</span>
-                <span id="anim2">em</span>
+                <span id="anim1">BUZZ</span>
+                <span id="anim2">EM</span>
                 <p>Webdevelopment</p>
             </div>
         </div>
     </div>
 
     <section id="wir">
-         <!-- <object id="stripes" data="assets/Streifen.svg" width="100%" height="100%"></object>
-         <img class="img-fluid" src="assets/stripes.png">         -->
-
-         <h1>WIR</h1>
-        <ul>
-            <li>BuzzEm, das sind wir. Sascha und Ben. Zwei Informatikstudenten, den es Spaß macht das Web und seine Möglichkeiten
-                immer wieder neu auszuprobieren und mitzugestalten. Wir bauen Websites weil wir es lieben. Und nicht weil
-                es unser Job ist.</li>
-            <li>Womit wir arbeiten ist sehr unterschiedlich und abhängig von den Projekten, die uns anvertraut werden. Je nachdem
-                was am sinnvollsten ist, um eine Anwendungen erfolgreich ins Web zu bringen.</li>
-            <li>Wir legen wert auf die Kombination aus Ansprechbarkeit/ guter Beratung und technisch effizienten Lösungen.
-            </li>
-            <li>Wir helfen Ihnen Ideen zu verwirklichen auch wenn sie selber noch nicht wissen wohin die Reise geht.
-            </li>
-            <li>Wir sind ein kleines Team. Für uns ist jeder Kunde sehr wichtig.
-            </li>
-            <li>Wir sind jederzeit ansprechbar. Und immer persönlich für unsere Kunden da.
-            </li>
-            <li>Wir nehmen uns Zeit. Für ihre Wünsche und Ziele. Für das Teilen unserer Erfahrungen und Empfehlungen. </li>
-        </ul>
+        <svg id="stripes" width="100%" height="100%" preserveAspectRatio="xMinYMax slice" viewBox="0 0 150 49" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+            <defs>
+                <linearGradient id="nightsky" x1="0" y1="49" x2="0" y2="0" gradientUnits="userSpaceOnUse">
+                    <stop offset="0" stop-color="#e53946" />
+                    <stop offset="0.99" stop-color="#1d3557" />
+                </linearGradient>
+            </defs>
+            <rect x="0" y="0" width="150" height="49" style="fill: var(--four6);stroke-linecap: round;stroke-linejoin: round;stroke-width: 0"></rect>
+        </svg>
+        <h1>WIR</h1>
+        <svg id="x-icon" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+            <title>close</title>
+            <line x1="2.5" y1="2.5" x2="37.5" y2="37.5" style="fill: #fff;stroke-linecap: round;stroke-miterlimit: 10;stroke-width: 5px"
+            />
+            <line x1="37.5" y1="2.5" x2="2.5" y2="37.5" style="fill: #fff;stroke-linecap: round;stroke-miterlimit: 10;stroke-width: 5px"
+            />
+        </svg>
+        <div class="slick-one">
+            <div>
+                <div class="inner">Bauen Websites weil wir es lieben. Nicht weil es unser Job ist.</div>
+            </div>
+            <div>
+                <div class="inner">Helfen Ihnen Ideen zu verwirklichen auch wenn sie selber noch nicht wissen wohin die Reise geht.</div>
+            </div>
+            <div>
+                <div class="inner">Sind ein kleines Team. Front und Backend. Alles aus einem Guss.</div>
+            </div>
+            
+            <div>
+                <div class="inner">Nehmen uns Zeit. Für ihre Wünsche und Ziele. Für das Teilen unserer Erfahrungen und Empfehlungen. </div>
+            </div>
+        </div>
     </section>
 
     <section id="contact">
@@ -146,7 +160,7 @@
                             </div>
                         </div>
 
-                        <div class="col-12 ">
+                        <div id="zustimmung" class="col-12 mb-3">
                             <span>
                                 <svg id="checkmark" xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" viewBox="0 0 51 51">
                                     <title>checkmark</title>
@@ -160,7 +174,7 @@
 
 
                             </span>
-                            <span>Ich stimme zu, dass meine Daten zur Bearbeitung meiner Anfrage verarbeitet werden. Weitere Hinweise
+                            <span >Ich stimme zu, dass meine Daten zur Bearbeitung meiner Anfrage verarbeitet werden. Weitere Hinweise
                                 hierzu finden Sie in unserer
                                 <a href="#">Datenschutzerklärung</a>
                             </span>
@@ -291,7 +305,8 @@
                             in diesem Fall dann, wenn die in den jeweiligen Vorschriften vorgeschriebene Speicherfrist abgelaufen
                             ist, es sei denn wir benötigen Ihre Daten zur Erfüllung eines zwischen uns geschlossenen Vertrages
                             oder wenn dies zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen erforderlich
-                            ist.</p>
+                            ist.
+                        </p>
                         <h3>Kontaktaufnahme über Kontaktformular, E-Mail, Soziale Medien oder Telefon</h3>
                         <p>
                             <strong>Umfang:</strong> Soweit Sie das auf unserer Internetpräsenz angebotene Kontaktformular nutzen
@@ -339,7 +354,8 @@
                                     <li>zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen,</li>
                                     <li>zur Ausübung des Rechts auf freie Meinungsäußerung und Information oder</li>
                                     <li>aus Gründen der in Art. 17 Abs. 3 lit c und d DSGVO genannten Fälle des öffentlichen
-                                        Interesses.</li>
+                                        Interesses.
+                                    </li>
                                 </ul>
                             </li>
                             <li>
@@ -366,7 +382,8 @@
                                 verlangte Berichtigung oder Löschung der Daten oder deren Einschränkung der Verarbeitung
                                 mitzuteilen, es sei denn, dies erweist sich als unmöglich oder ist mit einem unverhältnismäßigen
                                 Aufwand verbunden. Ihnen steht das Recht zu, von uns über diese Empfänger unterrichtet zu
-                                werden.</li>
+                                werden.
+                            </li>
                             <li>
                                 <strong>Recht auf Datenübertragbarkeit:</strong> Gemäß Art. 20 DSGVO können Sie verlangen, dass wir
                                 die Sie betreffenden personenbezogenen Daten, die Sie uns bereitgestellt haben, in einem
@@ -440,8 +457,9 @@
 
 
     <script type="text/javascript" src="js/jquery.jrumble.1.3.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/greensock.js"></script>
+
 </body>
 
 </html>

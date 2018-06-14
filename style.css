@@ -41,14 +41,16 @@ body {
     position: relative;
     background-color: var(--four5);
     z-index: 10;
+    _border: 1px solid greenyellow;
 }
 
-
+.front-content{
+    
+}
 #intro{
 position: absolute;
 top: 50%;
 left: 50%;
-max-width: 90vw;
 _border: dotted 3px rosybrown;
 transform: translate(-50%, -50%);
 line-height: .9;
@@ -57,26 +59,27 @@ line-height: .9;
 -ms-user-select: none; /* IE10+/Edge */
 user-select: none; /* Standard */
 text-transform: uppercase;
-font-size: 40px;    
+white-space: nowrap;
+font-size: 76px;
 }
-#intro p{
-    text-align: center;
-    font-size: .75em;
-}
+
 #anim1, #anim2{
-    font-size: 2em;
+    font-size: 1em;
     
 }
 
 #anim1 {
     color: var(--four2);
-    margin-right: .1em;
+    margin-right: 0;
 }
 
 #anim2{
     color: var(--four4);
 }
-
+#intro p {
+    font-size: .4em;
+    text-align: center;
+}
 
 
 #contact{
@@ -86,7 +89,7 @@ font-size: 40px;
 }
 #contact>h1, #wir>h1 {
     _display: none;
-line-height: 5em;
+    line-height: 5em;
     color: var(--four2);
     text-align: center;
     cursor: pointer;
@@ -108,9 +111,10 @@ line-height: 5em;
     height: 10px;
     margin: 1rem;
     position: absolute;
-    stroke: var(--four5);
+    stroke: var(--four2);
     top: 0;
     right:0;
+    z-index: -1;
 }
 #x-icon:hover{
     cursor: pointer;
@@ -196,25 +200,42 @@ line-height: 5em;
 
 
 #wir{
-    _background-color: var(--four6);
-    background: url("assets/stripes.png") center no-repeat;
-    background-size: 100% auto;
+    background-color: var(--four6);
     padding: 5rem;
     position: relative;
     
 }
 #wir>#stripes{
+    display: none;
     position: absolute;
+    background-color: var(--four6);
     top:0;
     left:0;
+    z-index: 1;
 }
 #wir>h1{
+    position: relative;
     color: var(--four2);
+    z-index: 4;
 }
-#wir ul{
+#wir>h1:hover{
+    color: var(--four1);
+}
+#wir .slick-one{
     display: none;
+    z-index: 4;
 }
 
+#wir .slick-one .inner {
+    z-index: 4;
+    text-align: center;
+    padding: 3em;
+    font-size: 24px;
+     max-width: 600px;
+    margin: 1em auto;
+    background-color: var(--four6);
+    -webkit-clip-path: polygon(0 100%,95% 95%,100% 0%, 5% 5%);
+}
 .send-button{
     position: relative;
     overflow: visible;
@@ -435,11 +456,14 @@ input, textarea {
 
 @media (max-width: 768px) {
     #contact, #impressum, #wir{
-        padding: 5rem 1rem;
+        padding: 4em 1em;
 
     }
     #intro{
-        font-size: 20px;
+        font-size: 48px;
+        max-width: none;
+
+
     }
     #cardcontainer{
         padding: 1em;
@@ -503,3 +527,13 @@ input, textarea {
     }
 }
 
+@media (max-width: 576px) {
+    #contact, #impressum, #wir{
+        padding: 1em 1em;
+
+    }
+    #intro{
+        font-size: 48px;
+        max-width: none;
+        
+    }
