@@ -27,6 +27,7 @@ body {
     color: var(--four2);
     font-family: 'Arvo', serif;
     height: auto;
+    background-color: var(--four6);
 }
 #background{
     display: none;
@@ -201,9 +202,10 @@ font-size: 76px;
     background-color: var(--four6);
     padding: 5rem;
     position: relative;
-    border-top: 5px solid var(--four6);
-    border-bottom: 5px solid var(--four6);
+    border-top: 0px solid var(--four6);
+    border-bottom: 0px solid var(--four6);
     text-align: center;
+    margin: 0 auto;
     
 }
 #wir>#stripes{
@@ -213,6 +215,7 @@ font-size: 76px;
     top:0;
     left:0;
     z-index: 1;
+
 }
 #wir>h1{
     position: relative;
@@ -459,12 +462,14 @@ input, textarea {
     margin-left: 1em;
     cursor: pointer;
     color: var(--four2);
+    font-size: .75em;
 }
 #footer li:first-child{
     margin-left:0;
 }
 
 @media (max-width: 768px) {
+    h1{ font-size: 30px;}
     #contact, #impressum, #wir{
         padding: 4em 1em;
 

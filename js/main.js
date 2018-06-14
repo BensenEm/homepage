@@ -98,7 +98,7 @@ window.onload = function(){
   let fixWidth = 8;
   let linesAmount = 30;
   let width= Array.from(Array(linesAmount).keys(), x => x-linesAmount/2+1);
-  let width_multiplicator=3;
+  let width_multiplicator=4;
   for(var count = 0; count<linesAmount; count++){
     if (width[count]>0){
       width[count] = width[count]*-1;
