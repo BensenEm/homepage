@@ -37,7 +37,7 @@ body {
     z-index: 0;
     overflow: hidden;
 }
-.landing-intro{
+#landing-intro{
     height: 100vh;
     position: relative;
     background-color: var(--four5);
@@ -493,7 +493,7 @@ input, textarea {
         margin-left: 2em;
     }
    
-    .landing-intro {
+    #landing-intro {
         position: relative;
         _height: auto;
     }
