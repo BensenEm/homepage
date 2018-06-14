@@ -1,4 +1,3 @@
-  var flipcardAtFrontside = true;
 
 /* LANDING ANIMATIONS */
 $anim1 = $('#anim1').jrumble({
@@ -31,10 +30,97 @@ window.onload = function(){
   setTimeout(function(){ 
     $anim2.trigger('startRumble')}, 1500);
   setTimeout(function(){
-    $anim2.trigger('stopRumble')}, 3000)}; 
+    $anim2.trigger('stopRumble')}, 3000)
+  }; 
+  
+  
 
 
 
+/* TOGGLE FORM FIELD*/
+$('#contact>h1').click(function(){
+  $('#contact>h1').toggle();
+  $('#contact #form-container').toggle();
+  $('#contact #x-icon').css({"z-index" : 10 })
+}) 
+$('#contact svg#x-icon').click(function(){
+  $('#contact>h1').toggle();
+  $('#contact #form-container').toggle();
+  $('#contact #x-icon').css({"z-index" : -1 })
+}) 
+
+/* TOGGLE IMPRESSUM */
+$('#impressum #x-icon').click(function(){
+  $('#impressum-wrapper').toggle();
+})
+
+$('#footer #imp, #footer #ds').click(function(){
+  $('#impressum-wrapper').toggle();
+})
+/* TOGGLE WIR */
+$('#wir>h1').click(function(){
+  $('#wir #stripes, #wir .slick-one').toggle();
+  $('#wir>h1').addClass('special');
+  $('#wir #x-icon').css({"z-index" : 10 })
+  $('.slick-one').slick({
+    slidesToShow: 1,
+     mobileFirst:true,
+     autoplay: true,
+     autoplaySpeed: 3000,
+     dots: true,
+     arrows:false,
+     pauseOnHover:false,
+     adaptiveHeight: false,
+   });
+})
+$('#wir #x-icon').click(function(){
+  $('#wir #stripes, .slick-one').toggle();
+  $('#wir>h1').removeClass('special');
+  $('#wir #x-icon').css({"z-index" : -1 });
+  $('.slick-one').slick('unslick');
+})
+/* SLICK SLIDE WIR */
+
+$(document).ready(function(){
+ 
+});
+
+/* CONFIRM DATENSCHUTZ*/
+$('#checkmark').click(function(){
+  $('#mark').toggle();
+
+});
+
+/* FILL SVG WITH LINES*/
+window.onload = function(){
+  let start = -100;
+  let end =-40;
+  let fixWidth = 8;
+  let linesAmount = 30;
+  let width= Array.from(Array(linesAmount).keys(), x => x-linesAmount/2+1);
+  let width_multiplicator=4;
+  for(var count = 0; count<linesAmount; count++){
+    if (width[count]>0){
+      width[count] = width[count]*-1;
+    }
+  };
+  width= Array.from(width, x=>(x+linesAmount/2+1)*.075);
+  console.log(width);
+
+  for(var count = 0; count<linesAmount; count++){
+
+    var line = d3.select('#wir>svg').append("line")
+    .attr("x1", start+ count*fixWidth)
+    .attr("y1", 51)
+    .attr("x2", end+count*fixWidth)
+    .attr("y2", -2)
+    .attr("stroke", "url(#nightsky)")
+    .attr("stroke-linecap", "square")
+    .attr("stroke-width", width[count]*width_multiplicator);
+   
+  }
+ 
+  };
 
 /* INPUT FORMS FILLED */
 function toggleFill(elem, turnOn){
@@ -114,34 +200,6 @@ $('#x-icon').click(function(){
  */
 });
 
-/* Calculates Height of Section One, as Content there is positioned */
-var flipcardAtFrontside = true;
-var updateSectionOneSize = function() {
-  
-  if(flipcardAtFrontside){
-    var height_front = $('.frontside').height();
-    var padding_front = parseInt($('.frontside').css("padding-top"));
-    flipcardAtFrontside = !flipcardAtFrontside;
-    $('.backside').css({display:"none"});
-  }
-  else {
-    $('.backside').css({display:"block"});
-    var height_front = $('.backside').height();
-    var padding_front = parseInt($('.backside').css("padding-top"));
-    flipcardAtFrontside = !flipcardAtFrontside;
-
-  }
-  var padding_card = parseInt($('#cardcontainer').css("padding-top"));
-  console.log(padding_front);
-  var totalHeight_sectionOne = height_front + 2*padding_front + 2*padding_card;
-  console.log(totalHeight_sectionOne);
-  $('#section-one').css({height: totalHeight_sectionOne});};
-
-  document.addEventListener('DOMContentLoaded', function(){
-    $('.backside').css({display:"none"});
-    updateSectionOneSize();}
-    , false);
-  
 
 
 
