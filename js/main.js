@@ -131,6 +131,7 @@ window.onload = function(){
         let gradient = d3.select('#wir #stripes defs #nightsky');
         gradient.select('stop#mid').attr('offset', relcursor);
       }
+      console.log(relcursor);
     });
   });
  
