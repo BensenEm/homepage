@@ -201,6 +201,9 @@ font-size: 76px;
     background-color: var(--four6);
     padding: 5rem;
     position: relative;
+    border-top: 5px solid var(--four6);
+    border-bottom: 5px solid var(--four6);
+    text-align: center;
     
 }
 #wir>#stripes{
@@ -215,6 +218,15 @@ font-size: 76px;
     position: relative;
     color: var(--four2);
     z-index: 4;
+    
+}
+#wir>h1.special{
+    display: inline;
+    background-color: var(--four6);
+    padding: 1em;
+    pointer-events: none;
+    -webkit-clip-path: polygon(0 100%,95% 95%,100% 0%, 5% 5%);
+
 }
 #wir>h1:hover{
     color: var(--four1);

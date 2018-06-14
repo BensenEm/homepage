@@ -59,7 +59,8 @@ $('#footer #imp, #footer #ds').click(function(){
 })
 /* TOGGLE WIR */
 $('#wir>h1').click(function(){
-  $('#wir #stripes, #wir h1, #wir .slick-one').toggle();
+  $('#wir #stripes, #wir .slick-one').toggle();
+  $('#wir>h1').addClass('special');
   $('#wir #x-icon').css({"z-index" : 10 })
   $('.slick-one').slick({
     slidesToShow: 1,
@@ -73,7 +74,8 @@ $('#wir>h1').click(function(){
    });
 })
 $('#wir #x-icon').click(function(){
-  $('#wir #stripes, #wir h1, #wir .slick-one').toggle();
+  $('#wir #stripes, .slick-one').toggle();
+  $('#wir>h1').removeClass('special');
   $('#wir #x-icon').css({"z-index" : -1 });
   $('.slick-one').slick('unslick');
 })
@@ -91,12 +93,12 @@ $('#checkmark').click(function(){
 
 /* FILL SVG WITH LINES*/
 window.onload = function(){
-  let start = -50;
-  let end =10;
+  let start = -100;
+  let end =-40;
   let fixWidth = 8;
   let linesAmount = 30;
   let width= Array.from(Array(linesAmount).keys(), x => x-linesAmount/2+1);
-  let width_multiplicator=4;
+  let width_multiplicator=3;
   for(var count = 0; count<linesAmount; count++){
     if (width[count]>0){
       width[count] = width[count]*-1;
@@ -111,12 +113,11 @@ window.onload = function(){
     .attr("x1", start+ count*fixWidth)
     .attr("y1", 51)
     .attr("x2", end+count*fixWidth)
-    .attr("y2", 0)
+    .attr("y2", -2)
     .attr("stroke", "url(#nightsky)")
     .attr("stroke-linecap", "square")
     .attr("stroke-width", width[count]*width_multiplicator);
-   /*  console.log ("x1: ", start+count*fixWidth);
-    console.log ("x2; ", end+count*fixWidth); */
+   
   }
  
   };
