@@ -6,6 +6,7 @@ function checkForm() {
         return false;
     } else {
         sessionStorage.success = true;
+        return true;
     }
 }
 
