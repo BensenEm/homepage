@@ -156,8 +156,6 @@ window.onload = function () {
       console.log(relcursor);
     });
   });
- 
-  };
 
 /* INPUT FORMS FILLED */
 function toggleFill(elem, turnOn) {
