@@ -125,7 +125,6 @@ window.onload = function () {
             .attr("stroke-width", width[count] * width_multiplicator);
 
     }
-  };
   width= Array.from(width, x=>(x+linesAmount/2+1)*.075);
   console.log(width);
 
@@ -142,6 +141,7 @@ window.onload = function () {
    
   }
 
+};
   /* Adjust Gradient*/
   $('#wir').hover(function(){
     $( '#wir' ).on( "mousemove", function( event ) {
