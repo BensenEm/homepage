@@ -101,11 +101,11 @@
             <line x1="37.5" y1="2.5" x2="2.5" y2="37.5" style="fill: #fff;stroke-linecap: round;stroke-miterlimit: 10;stroke-width: 5px" />
         </svg>
         <div id="form-container">
-            <form action="#contact" onsubmit="return checkForm()" method="post">
+            <form action="send-mail.php" onsubmit="return checkForm()"  method="post">
                 <div class="container p-2 p-sm-5 ">
                     <div class="row d-flex flex-row justify-content-end">
                         <div class="send-button p-3 d-none d-md-block">
-                            <button id="send-btn" class="b-btn"> Send</button>
+				<button id="send-btn" class="b-btn" type="submit">Send</button>
                         </div>
                     </div>
                     <div id="contact-label" class="row">
@@ -118,7 +118,7 @@
                     <div class="row">
                         <div class="col-12 col-md-6">
                             <div class="container--ben">
-                                <input id="name" class="input--ben" type="text" />
+                                <input id="name" name="name" class="input--ben" type="text" />
                                 <label for="name" class="label--ben">
                                     <span class="content--ben">Name</span>
                                 </label>
@@ -128,7 +128,7 @@
 
                         <div class="col-12 col-md-6">
                             <div class="container--ben">
-                                <input id="email" class="input--ben" type="email" required />
+                                <input id="email" name="email" class="input--ben" type="email" required />
                                 <label for="email" class="label--ben">
                                     <span class="content--ben">Mail</span>
                                 </label>
@@ -138,7 +138,7 @@
 
                         <div class="col-12 col-md-6">
                             <div class="container--ben">
-                                <input id="subject" class="input--ben" type="text" />
+                                <input id="subject" name="subject" class="input--ben" type="text" />
                                 <label for="subject" class="label--ben">
                                     <span class="content--ben">Subject</span>
                                 </label>
@@ -147,7 +147,7 @@
                         </div>
                         <div class="col-12 col-md-6">
                             <div class="container--ben">
-                                <input id="telephone" class="input--ben" type="tel" />
+                                <input id="telephone" name="telephone" class="input--ben" type="tel" />
                                 <label for="telephone" class="label--ben">
                                     <span class="content--ben">Telephone</span>
                                 </label>
@@ -156,7 +156,7 @@
                         </div>
                         <div class="col-12 col-md-12">
                             <div class="container--ben textarea">
-                                <textarea id="text" class="input--ben" type="text" required></textarea>
+                                <textarea id="text" name="message" class="input--ben" type="text" required></textarea>
                                 <label for="text" class="label--ben">
                                     <span class="content--ben">Message</span>
                                 </label>
@@ -183,7 +183,7 @@
                             </div>
                         </div>
                         <div class="col-12 d-md-none">
-                            <button class="b-btn"> Send</button>
+				<button class="b-btn" type="submit">Send</button>
                         </div>
 
 
@@ -511,3 +511,4 @@
 </body>
 
 </html>
+

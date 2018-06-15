@@ -1,13 +1,13 @@
 
 <?php
 require 'vendor/autoload.php'; 
-$dotenv = new Dotenv\Dotenv(__DIR__, "sendgrid.env");
-$dotenv->load();
+$dotenv = new Dotenv\Dotenv(__DIR__, "sendgrid.env"); 
 
-$email = new \SendGrid\Mail\Mail(); 
-$email->setFrom($_POST["email"], $_POST["name"]);
-$email->setSubject($_POST["subject"]);
-$email->addTo("info@buzzem.de", "Contact Form");
+$dotenv->load();
+$email = new \SendGrid\Mail\Mail();
+$email->setFrom($_POST["email"],$_POST["name"]);
+$email->setSubject($_POST["subject"]); 
+$email->addTo("info@buzzem.de", "ContactForm");
 $email->addContent("text/html", "Tel.: " . $_POST["telephone"] . "<br>" . $_POST["message"]);
 $sendgrid = new \SendGrid(getenv("SENDGRID_API_KEY"));
 try {
