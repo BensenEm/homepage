@@ -125,8 +125,39 @@ window.onload = function () {
             .attr("stroke-width", width[count] * width_multiplicator);
 
     }
+  };
+  width= Array.from(width, x=>(x+linesAmount/2+1)*.075);
+  console.log(width);
 
-};
+  for(var count = 0; count<linesAmount; count++){
+
+    var line = d3.select('#wir>svg').append("line")
+    .attr("x1", start+ count*fixWidth)
+    .attr("y1", 51)
+    .attr("x2", end+count*fixWidth)
+    .attr("y2", -2)
+    .attr("stroke", "url(#nightsky)")
+    .attr("stroke-linecap", "square")
+    .attr("stroke-width", width[count]*width_multiplicator);
+   
+  }
+
+  /* Adjust Gradient*/
+  $('#wir').hover(function(){
+    $( '#wir' ).on( "mousemove", function( event ) {
+      let height = $('#landing-intro').height();
+      let spektrum = $('#stripes').height();
+      let y= event.pageY-height;
+      let relcursor= 1- y/spektrum;
+      if(relcursor>.35 && relcursor<.65){
+        let gradient = d3.select('#wir #stripes defs #nightsky');
+        gradient.select('stop#mid').attr('offset', relcursor);
+      }
+      console.log(relcursor);
+    });
+  });
+ 
+  };
 
 /* INPUT FORMS FILLED */
 function toggleFill(elem, turnOn) {
@@ -171,38 +202,6 @@ $('#mail-button').click(function () {
 });
 
 
-/* RETURN FROM MAIL Effect*/
-
-/* $('.b-btn').click(function(){
-  $('#section-one').css({transform:"translateX(100%) translateY(-50%)"});
-  var frontSlideBack = window.setTimeout(function(){
-    $('#section-one').css({transform:"translateX(-50%) translateY(-50%)"});
-    $('#section-one').removeClass('slide-in');
-    $('.front-content').removeClass('slide-out');
-  }, 1000);  
-}) */
-
-$('#leaveLetterIcon, #leaveLetterIcon2').click(function () {
-    $('#section-one').removeClass('slide-in');
-    //$('#leaveLetterIcon').removeClass('slide-in');
-    var frontSlideBack = window.setTimeout(function () {
-        $('.front-content').removeClass('slide-out')
-    }, 1000);
-
-});
-
-/* Flip Flipcard  */
-$('#marker').click(function () {
-    $('#flipcard').css({ transform: "rotateY(180deg)" });
-    updateSectionOneSize();
-});
-
-$('#x-icon').click(function () {
-    $('#flipcard').css({ transform: "rotateY(0deg)" });
-    updateSectionOneSize();
-    /*   $('.backside').css({display:"none"});
-     */
-});
 
 
 
