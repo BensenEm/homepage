@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" class="no-js">
 
 <head>
@@ -11,9 +11,9 @@
     <meta name="author" content="bensen em, shubosha kuro, buzzem" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
-        crossorigin="anonymous">
+          crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
-        crossorigin="anonymous"></script>
+            crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Arvo:400,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
@@ -28,18 +28,18 @@
     <div id="background">
 
         <svg width="100%" height="100%" preserveAspectRatio="xMaxYMax slice" viewBox="0 0 400 400" version="1.1" xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
-            <defs>
-                <pattern id="pattern4" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
-                    <path d="M 1 1 L 50 50 L 100 100 L 150 150 L 199 199" style="stroke:var(--four5); stroke-width:.5px; stroke-linecap:round"></path>
+             xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+        <defs>
+        <pattern id="pattern4" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+        <path d="M 1 1 L 50 50 L 100 100 L 150 150 L 199 199" style="stroke:var(--four5); stroke-width:.5px; stroke-linecap:round"></path>
                 </pattern>
             </defs>
 
-            <rect y="0" x="0" width="100%" height="100%" fill="url(#pattern4)">
+        <rect y="0" x="0" width="100%" height="100%" fill="url(#pattern4)">
         </svg>
     </div>
 
-    <div class="landing-intro">
+    <div id="landing-intro">
         <div class="front-content">
             <div id="intro">
                 <span id="anim1">BUZZ</span>
@@ -55,27 +55,26 @@
             <defs>
                 <linearGradient id="nightsky" x1="0" y1="49" x2="0" y2="0" gradientUnits="userSpaceOnUse">
                     <stop offset="0" stop-color="#e53946" />
+                    <stop id=mid offset="0.5" stop-color="#7F374F" />
                     <stop offset="0.99" stop-color="#1d3557" />
                 </linearGradient>
-                <linearGradient id="fadeEdges" x1="0" y1="25" x2="1" y2="25" gradientUnits="userSpaceOnUse">
-                        <stop offset="5%"  stop-color="black"/>
+                <linearGradient id="fadeEdges" x1="0" y1="25" x2="150" y2="25" gradientUnits="userSpaceOnUse">
+                        <stop offset="0.1%"  stop-color="black"/>
                         <stop offset="50%"  stop-color="white"/>
-                        <stop offset="95%" stop-color="black"/>
+                        <stop offset="110%" stop-color="black"/>
                 </linearGradient>
                 <mask id="maskEdges">
                     <rect x="0" y="0" width="100%" height="100%" fill="url(#fadeEdges)"></rect>
                 </mask>
                 
             </defs>
-            <rect x="0" y="0" width="150" height="49"  style="fill: var(--four6);stroke-linecap: round;stroke-linejoin: round;stroke-width: 0"></rect>
+            <rect x="0" y="0" width="150" height="49" style="fill: var(--four6);stroke-linecap: round;stroke-linejoin: round;stroke-width: 0"></rect>
         </svg>
         <h1>WIR</h1>
         <svg id="x-icon" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
             <title>close</title>
-            <line x1="2.5" y1="2.5" x2="37.5" y2="37.5" style="fill: #fff;stroke-linecap: round;stroke-miterlimit: 10;stroke-width: 5px"
-            />
-            <line x1="37.5" y1="2.5" x2="2.5" y2="37.5" style="fill: #fff;stroke-linecap: round;stroke-miterlimit: 10;stroke-width: 5px"
-            />
+            <line x1="2.5" y1="2.5" x2="37.5" y2="37.5" style="fill: #fff;stroke-linecap: round;stroke-miterlimit: 10;stroke-width: 5px" />
+            <line x1="37.5" y1="2.5" x2="2.5" y2="37.5" style="fill: #fff;stroke-linecap: round;stroke-miterlimit: 10;stroke-width: 5px" />
         </svg>
         <div class="slick-one">
             <div>
@@ -87,33 +86,30 @@
             <div>
                 <div class="inner">... sind ein kleines Team. Front und Backend. Alles aus einem Guss.</div>
             </div>
-            
+
             <div>
                 <div class="inner">... nehmen uns Zeit. Für ihre Wünsche und Ziele. Für das Teilen unserer Erfahrungen und Empfehlungen. </div>
             </div>
         </div>
     </section>
-
+    <a name="contact"></a>
     <section id="contact">
         <h1>KONTAKT</h1>
         <svg id="x-icon" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
             <title>close</title>
-            <line x1="2.5" y1="2.5" x2="37.5" y2="37.5" style="fill: #fff;stroke-linecap: round;stroke-miterlimit: 10;stroke-width: 5px"
-            />
-            <line x1="37.5" y1="2.5" x2="2.5" y2="37.5" style="fill: #fff;stroke-linecap: round;stroke-miterlimit: 10;stroke-width: 5px"
-            />
+            <line x1="2.5" y1="2.5" x2="37.5" y2="37.5" style="fill: #fff;stroke-linecap: round;stroke-miterlimit: 10;stroke-width: 5px" />
+            <line x1="37.5" y1="2.5" x2="2.5" y2="37.5" style="fill: #fff;stroke-linecap: round;stroke-miterlimit: 10;stroke-width: 5px" />
         </svg>
         <div id="form-container">
-
-
-            <form action="#">
+            <form action="#contact" onsubmit="return checkForm()" method="post">
+                <input type="hidden" value="success" name="submission" />
                 <div class="container p-2 p-sm-5 ">
                     <div class="row d-flex flex-row justify-content-end">
                         <div class="send-button p-3 d-none d-md-block">
-                            <button class="b-btn "> Send</button>
+                            <button id="send-btn" class="b-btn"> Send</button>
                         </div>
                     </div>
-                    <div class="row">
+                    <div id="contact-label" class="row">
                         <div class="title pl-3">
                             <div>
                                 <h1>KONTAKT</h1>
@@ -133,7 +129,7 @@
 
                         <div class="col-12 col-md-6">
                             <div class="container--ben">
-                                <input id="email" class="input--ben" type="text" />
+                                <input id="email" class="input--ben" type="email" required />
                                 <label for="email" class="label--ben">
                                     <span class="content--ben">Mail</span>
                                 </label>
@@ -152,7 +148,7 @@
                         </div>
                         <div class="col-12 col-md-6">
                             <div class="container--ben">
-                                <input id="telephone" class="input--ben" type="text" />
+                                <input id="telephone" class="input--ben" type="tel" />
                                 <label for="telephone" class="label--ben">
                                     <span class="content--ben">Telephone</span>
                                 </label>
@@ -161,7 +157,7 @@
                         </div>
                         <div class="col-12 col-md-12">
                             <div class="container--ben textarea">
-                                <textarea id="text" class="input--ben" type="text"></textarea>
+                                <textarea id="text" class="input--ben" type="text" required></textarea>
                                 <label for="text" class="label--ben">
                                     <span class="content--ben">Message</span>
                                 </label>
@@ -173,20 +169,19 @@
                             <span>
                                 <svg id="checkmark" xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" viewBox="0 0 51 51">
                                     <title>checkmark</title>
-                                    <polyline id="mark" points="39 11 24 39 11 26" style="fill: none;stroke-linecap: round;stroke-linejoin: round;stroke-width: 6px"
-                                    />
-                                    <rect id="outline" x="2.5" y="2.5" width="46" height="46" style="fill: none;stroke-linecap: round;stroke-linejoin: round;stroke-width: 5px"
-                                    />
+                                    <polyline id="mark" points="39 11 24 39 11 26" style="fill: none;stroke-linecap: round;stroke-linejoin: round;stroke-width: 6px" />
+                                    <rect id="outline" x="2.5" y="2.5" width="46" height="46" style="fill: none;stroke-linecap: round;stroke-linejoin: round;stroke-width: 5px" />
                                 </svg>
-
-
-
-
                             </span>
-                            <span >Ich stimme zu, dass meine Daten zur Bearbeitung meiner Anfrage verarbeitet werden. Weitere Hinweise
+                            <span>
+                                Ich stimme zu, dass meine Daten zur Bearbeitung meiner Anfrage verarbeitet werden. Weitere Hinweise
                                 hierzu finden Sie in unserer
-                                <a href="#">Datenschutzerklärung</a>
+                                <a href="#">Datenschutzerklärung</a>.
                             </span>
+
+                            <div id="msg">
+                                Nachricht erfolgreich gesendet.
+                            </div>
                         </div>
                         <div class="col-12 d-md-none">
                             <button class="b-btn"> Send</button>
@@ -207,10 +202,8 @@
             <h1>IMPRESSUM</h1>
             <svg id="x-icon" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
                 <title>close</title>
-                <line x1="2.5" y1="2.5" x2="37.5" y2="37.5" style="fill: #fff;;stroke-linecap: round;stroke-miterlimit: 10;stroke-width: 5px"
-                />
-                <line x1="37.5" y1="2.5" x2="2.5" y2="37.5" style="fill: #fff;stroke-linecap: round;stroke-miterlimit: 10;stroke-width: 5px"
-                />
+                <line x1="2.5" y1="2.5" x2="37.5" y2="37.5" style="fill: #fff;;stroke-linecap: round;stroke-miterlimit: 10;stroke-width: 5px" />
+                <line x1="37.5" y1="2.5" x2="2.5" y2="37.5" style="fill: #fff;stroke-linecap: round;stroke-miterlimit: 10;stroke-width: 5px" />
             </svg>
             <div class="container">
                 <div class="row py-5">
@@ -231,12 +224,15 @@
                         <div>
                             <h2>Datenschutzerklärung</h2>
                         </div>
-                        <p>Mit dieser Datenschutzerklärung möchten wir Sie über Art, Umfang und Zweck der Verarbeitung von personenbezogenen
+                        <p>
+                            Mit dieser Datenschutzerklärung möchten wir Sie über Art, Umfang und Zweck der Verarbeitung von personenbezogenen
                             Daten auf unserer Webseite aufklären. Personenbezogene Daten sind alle Daten, die einen persönlichen
-                            Bezug zu Ihnen aufweisen, z. B. Name, Adresse, E-Mail-Adresse oder Nutzerverhalten.</p>
+                            Bezug zu Ihnen aufweisen, z. B. Name, Adresse, E-Mail-Adresse oder Nutzerverhalten.
+                        </p>
                         <h3>Wer bei uns für die Datenverarbeitung verantwortlich ist</h3>
                         <p>Verantwortlich für die Datenverarbeitung ist:</p>
-                        <p>Benjamin Molnár und Sascha Bussian GbR
+                        <p>
+                            Benjamin Molnár und Sascha Bussian GbR
                             <br>Benjamin Molnár
                             <br>Atzpodienstr.
                             <br>10365 Berlin
@@ -245,18 +241,22 @@
                             <br>
                         </p>
                         <h3>Webhosting</h3>
-                        <p>Wir bedienen uns zum Vorhalten unserer Onlinepräsenz eines Internet-Service-Providers, auf dessen
+                        <p>
+                            Wir bedienen uns zum Vorhalten unserer Onlinepräsenz eines Internet-Service-Providers, auf dessen
                             Server die Webseite gespeichert wird (Hosting) und der unsere Seite im Internet verfügbar macht.
                             Hierbei verarbeitet der Internet-Service-Provider in unserem Auftrag Kontaktdaten, Inhaltsdaten,
                             Vertragsdaten, Nutzungsdaten, Bestandsdaten sowie Meta- und Kommunikationsdaten. Rechtsgrundlage:
                             Rechtsgrundlage für die vorbeschriebene Verarbeitung ist unser berechtigtes Interesse an einer
                             effizienten und sicheren Zurverfügungstellung unseres Onlineangebotes, Art. 6 Abs. 1 lit. f DSGVO
-                            i. V. m. Art. 28 DSGVO (Auftragsverarbeitungsvertrag).</p>
+                            i. V. m. Art. 28 DSGVO (Auftragsverarbeitungsvertrag).
+                        </p>
                         <p></p>
                         <div class="ce_text block">
-                            <p>Sofern Sie unsere Webseite lediglich informatorisch nutzen, werden von unserem Internet-Service-Provider
+                            <p>
+                                Sofern Sie unsere Webseite lediglich informatorisch nutzen, werden von unserem Internet-Service-Provider
                                 nur diejenigen personenbezogenen Daten erhoben, die der von Ihnen verwendete Browser an dessen
-                                Server übermittelt. Das sind folgende Daten:</p>
+                                Server übermittelt. Das sind folgende Daten:
+                            </p>
                             <ul>
                                 <li>IP-Adresse</li>
                                 <li>das Datum und die Uhrzeit des Zugriffs auf unsere Internetseite</li>
@@ -269,7 +269,8 @@
                                 <li>die Internetseite, von welcher Sie gegebenenfalls auf unsere Internetseite gelangt sind</li>
                                 <li>die Seiten bzw. Unterseiten, welche Sie auf unserer Internetseite besuchen.</li>
                             </ul>
-                            <p>Die vorgenannten Daten werden als Logfiles auf den Servern unseres Internet-Service-Providers
+                            <p>
+                                Die vorgenannten Daten werden als Logfiles auf den Servern unseres Internet-Service-Providers
                                 gespeichert. Dies ist erforderlich, um die Webseite auf dem von Ihnen genutzten Endgerät
                                 darstellen zu können, sowie die Stabilität und Sicherheit zu gewährleisten. In den vorstehenden
                                 Zwecken liegt unser berechtigtes Interesse an der Datenverarbeitung.
@@ -277,11 +278,13 @@
                                 <strong>Dauer:</strong> Die vorstehenden Daten zur Bereitstellung unserer Webseite werden für die
                                 Dauer von 7 Tagen gespeichert und dann gelöscht.
                                 <strong>Verhinderung:</strong> Da die Verarbeitung der vorstehenden Daten für die Bereitstellung
-                                unseres Internetauftritts zwingend erforderlich ist, besteht kein Widerspruchsrecht.</p>
+                                unseres Internetauftritts zwingend erforderlich ist, besteht kein Widerspruchsrecht.
+                            </p>
                         </div>
                         <p></p>
                         <h3>Cookies</h3>
-                        <p>Unsere Internetseite nutzt Cookies. Bei Cookies handelt es sich um kleine Textdateien, bestehend
+                        <p>
+                            Unsere Internetseite nutzt Cookies. Bei Cookies handelt es sich um kleine Textdateien, bestehend
                             aus einer Reihe von Zahlen und Buchstaben, die auf dem von Ihnen genutzten Endgerät abgelegt
                             und gespeichert werden. Cookies übertragen weder Viren noch können sie Programme ausführen. Vielmehr
                             dienen sie vorrangig dazu, Informationen zwischen dem von Ihnen genutzten Endgerät und unserer
@@ -293,22 +296,30 @@
                             Webseite zurückkehren. Die Session-Cookies werden gelöscht, wenn Sie sich ausloggen oder Ihren
                             Browser schließen. Persistente Cookies werden automatisiert nach einer vorgegebenen Dauer gelöscht,
                             die sich je nach Cookie unterscheiden kann. Sie haben die Möglichkeit, diese Cookies in den Sicherheitseinstellungen
-                            Ihres Browsers jederzeit zu löschen.</p>
-                        <p>Die Cookies dienen dazu, unsere Website nutzerfreundlicher zu gestalten. Einige Elemente unserer
+                            Ihres Browsers jederzeit zu löschen.
+                        </p>
+                        <p>
+                            Die Cookies dienen dazu, unsere Website nutzerfreundlicher zu gestalten. Einige Elemente unserer
                             Internetseite erfordern es, dass der aufrufende Browser auch nach einem Seitenwechsel identifiziert
                             werden kann. In diesen Cookies können insbesondere Informationen zu Spracheinstellungen oder
-                            Log-In-Informationen gespeichert sein.</p>
+                            Log-In-Informationen gespeichert sein.
+                        </p>
                         <p></p>
-                        <p>In den vorstehenden Zwecken liegt unser berechtigtes Interesse an der Datenverarbeitung. Rechtsgrundlage
-                            hierfür ist Art. 6 Abs. 1 S. 1 lit. f DSGVO.</p>
-                        <p>Da die Cookies auf Ihrem Computer gespeichert werden, haben Sie als Nutzer auch die volle Kontrolle
+                        <p>
+                            In den vorstehenden Zwecken liegt unser berechtigtes Interesse an der Datenverarbeitung. Rechtsgrundlage
+                            hierfür ist Art. 6 Abs. 1 S. 1 lit. f DSGVO.
+                        </p>
+                        <p>
+                            Da die Cookies auf Ihrem Computer gespeichert werden, haben Sie als Nutzer auch die volle Kontrolle
                             über die Verwendung von Cookies. Sie haben die Möglichkeit, über die Sicherheitseinstellungen
                             Ihres Browsers festzulegen, ob Cookies überhaupt gespeichert werden. Sie können etwa von vornherein
                             keine oder nur auf Nachfrage Cookies akzeptieren oder aber festlegen, dass Cookies nach jedem
                             Schließen Ihres Browsers gelöscht werden. Werden Cookies für unsere Website deaktiviert, können
-                            möglicherweise nicht mehr alle Funktionen der Website vollumfänglich genutzt werden.</p>
+                            möglicherweise nicht mehr alle Funktionen der Website vollumfänglich genutzt werden.
+                        </p>
                         <h3>Speicherdauer/Löschung</h3>
-                        <p>Wir löschen oder sperren Ihre personenbezogenen Daten, sobald der Zweck der Speicherung erreicht
+                        <p>
+                            Wir löschen oder sperren Ihre personenbezogenen Daten, sobald der Zweck der Speicherung erreicht
                             ist oder entfällt. Eine darüberhinausgehende Speicherung erfolgt nur, wenn uns dies durch nationale
                             oder europäische Vorschriften aufgegeben wird. Eine Sperrung oder Löschung der Daten erfolgt
                             in diesem Fall dann, wenn die in den jeweiligen Vorschriften vorgeschriebene Speicherfrist abgelaufen
@@ -333,10 +344,13 @@
                             nicht mehr erforderlich sind. Wir überprüfen die Erforderlichkeit alle 2 Jahre. Außerdem können
                             Sie die Datenverarbeitung jederzeit widerrufen.
                             <strong>Verhinderung: </strong>Sie können die Speicherung und Verarbeitung Ihrer personenbezogenen Daten
-                            verhindern, indem Sie davon absehen das Kontaktformular zu nutzen.</p>
+                            verhindern, indem Sie davon absehen das Kontaktformular zu nutzen.
+                        </p>
                         <h3>Ihre Rechte als Nutzer unserer Onlinepräsenz nach der DSGVO</h3>
-                        <p>Nach der DSGVO stehen Ihnen die nachfolgend aufgeführten Rechte zu, die Sie jederzeit bei dem in
-                            Ziffer 1. dieser Datenschutzerklärung genannten Verantwortlichen geltend machen können:</p>
+                        <p>
+                            Nach der DSGVO stehen Ihnen die nachfolgend aufgeführten Rechte zu, die Sie jederzeit bei dem in
+                            Ziffer 1. dieser Datenschutzerklärung genannten Verantwortlichen geltend machen können:
+                        </p>
                         <ul>
                             <li>
                                 <strong>Recht auf Auskunft:</strong> Sie können nach Art. 15 DSGVO eine Bestätigung darüber verlangen,
@@ -349,11 +363,13 @@
                                 Ihnen ein Auskunftsrecht darüber zu, ob Ihre personenbezogenen Daten an ein Drittland oder
                                 an eine internationale Organisation übermittelt wurden. Sofern dies der Fall ist, steht Ihnen
                                 das Recht zu, Auskunft über die geeigneten Garantien im Zusammenhang mit der Übermittlung
-                                zu erhalten.</li>
+                                zu erhalten.
+                            </li>
                             <li>
                                 <strong>Recht auf Berichtigung:</strong> Gemäß Art. 16 DSGVO können Sie die Berichtigung unrichtiger
                                 oder Vervollständigung unvollständiger der bei uns gespeicherten und Sie betreffenden personenbezogenen
-                                Daten verlangen.</li>
+                                Daten verlangen.
+                            </li>
                             <li>
                                 <strong>Recht auf Löschung:</strong> Gemäß Art. 17 DSGVO steht Ihnen das Recht zu, die Löschung Ihrer
                                 bei uns gespeicherten personenbezogenen Daten zu verlangen, soweit wir deren Verarbeitung
@@ -362,7 +378,8 @@
                                     <li>zur Erfüllung einer rechtlichen Verpflichtung,</li>
                                     <li>zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen,</li>
                                     <li>zur Ausübung des Rechts auf freie Meinungsäußerung und Information oder</li>
-                                    <li>aus Gründen der in Art. 17 Abs. 3 lit c und d DSGVO genannten Fälle des öffentlichen
+                                    <li>
+                                        aus Gründen der in Art. 17 Abs. 3 lit c und d DSGVO genannten Fälle des öffentlichen
                                         Interesses.
                                     </li>
                                 </ul>
@@ -371,17 +388,24 @@
                                 <strong>Recht auf Einschränkung:</strong> Gemäß Art. 18 DSGVO haben Sie das Recht, die Einschränkung
                                 der Verarbeitung Ihrer personenbezogenen Daten zu verlangen, wenn
                                 <ul>
-                                    <li>die Richtigkeit der Daten von Ihnen bestritten wird, und zwar für eine Dauer, die es
-                                        uns ermöglicht, die Richtigkeit der personenbezogenen Daten zu überprüfen,</li>
-                                    <li>die Verarbeitung Ihrer Daten unrechtmäßig ist, Sie aber deren Löschung ablehnen und stattdessen
-                                        die Einschränkung der Nutzung der Daten verlangen,</li>
-                                    <li>wir die personenbezogenen Daten für die Zwecke der Verarbeitung nicht länger benötigen,
+                                    <li>
+                                        die Richtigkeit der Daten von Ihnen bestritten wird, und zwar für eine Dauer, die es
+                                        uns ermöglicht, die Richtigkeit der personenbezogenen Daten zu überprüfen,
+                                    </li>
+                                    <li>
+                                        die Verarbeitung Ihrer Daten unrechtmäßig ist, Sie aber deren Löschung ablehnen und stattdessen
+                                        die Einschränkung der Nutzung der Daten verlangen,
+                                    </li>
+                                    <li>
+                                        wir die personenbezogenen Daten für die Zwecke der Verarbeitung nicht länger benötigen,
                                         Sie die Daten jedoch zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen
                                         benötigen
                                     </li>
-                                    <li>Sie gemäß Art. 21 DSGVO Widerspruch gegen die Verarbeitung Ihrer Daten eingelegt haben,
+                                    <li>
+                                        Sie gemäß Art. 21 DSGVO Widerspruch gegen die Verarbeitung Ihrer Daten eingelegt haben,
                                         es aber noch nicht feststeht, ob die berechtigten Gründe, die uns trotz Ihres Widerspruches
-                                        zu einer weiteren Verarbeitung berechtigten, Ihre Rechte überwiegen.</li>
+                                        zu einer weiteren Verarbeitung berechtigten, Ihre Rechte überwiegen.
+                                    </li>
                                 </ul>
                             </li>
                             <li>
@@ -397,44 +421,58 @@
                                 <strong>Recht auf Datenübertragbarkeit:</strong> Gemäß Art. 20 DSGVO können Sie verlangen, dass wir
                                 die Sie betreffenden personenbezogenen Daten, die Sie uns bereitgestellt haben, in einem
                                 strukturierten, gängigen und maschinenlesebaren Format zu erhalten oder die Übermittlung
-                                an einen anderen Verantwortlichen zu verlangen.</li>
+                                an einen anderen Verantwortlichen zu verlangen.
+                            </li>
                             <li>
                                 <strong>Beschwerderecht</strong>: Nach Art. 77 DSGVO haben Sie das Recht, sich bei einer Aufsichtsbehörde
                                 zu beschweren. Hierfür können Sie sich an die Aufsichtsbehörde Ihres üblichen Aufenthaltsortes,
-                                Ihres Arbeitsplatzes oder unseres Firmensitzes wenden.</li>
+                                Ihres Arbeitsplatzes oder unseres Firmensitzes wenden.
+                            </li>
                         </ul>
                         <h3>Widerrufsrecht</h3>
-                        <p>Gemäß Art. 7 Abs. 3 DSGVO steht Ihnen das Recht zu, Ihre erteilte Einwilligung in die Verarbeitung
+                        <p>
+                            Gemäß Art. 7 Abs. 3 DSGVO steht Ihnen das Recht zu, Ihre erteilte Einwilligung in die Verarbeitung
                             Ihrer Daten jederzeit uns gegenüber zu widerrufen. Der von Ihnen erklärte Widerruf ändert nichts
-                            an der Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung Ihrer personenbezogenen Daten.</p>
+                            an der Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung Ihrer personenbezogenen Daten.
+                        </p>
                         <h3>Widerspruchsrecht</h3>
-                        <p>Sie haben das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, jederzeit gegen
+                        <p>
+                            Sie haben das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, jederzeit gegen
                             die Verarbeitung der Sie betreffenden personenbezogenen Daten, die aufgrund einer Interessenabwägung
                             (Art. 6 Abs. 1 lit. f DSGVO) erfolgt, Widerspruch einzulegen. Dies ist insbesondere dann der
                             Fall, wenn die Datenverarbeitung nicht zur Erfüllung eines Vertrages erforderlich ist. Sofern
                             Sie von Ihrem Widerspruchsrecht Gebrauch machen, bitten wir Sie um die Darlegung der Gründe.
                             Wir werden Ihre personenbezogenen Daten dann nicht mehr verarbeiten, es sei denn, wir können
                             Ihnen gegenüber nachweisen, dass zwingende schutzwürdige Gründe an der Datenverarbeitung Ihre
-                            Interessen und Rechte überwiegen.</p>
+                            Interessen und Rechte überwiegen.
+                        </p>
                         <p>
                             <span style="text-decoration: underline;">
-                                <strong>Unabhängig vom vorstehend Gesagten, haben Sie das jederzeitige Recht, der Verarbeitung Ihrer
-                                    personenbezogenen Daten für Zwecke der Werbung und Datenanalyse zu widersprechen.</strong>
+                                <strong>
+                                    Unabhängig vom vorstehend Gesagten, haben Sie das jederzeitige Recht, der Verarbeitung Ihrer
+                                    personenbezogenen Daten für Zwecke der Werbung und Datenanalyse zu widersprechen.
+                                </strong>
                             </span>
                         </p>
                         <p>Ihren Widerspruch richten Sie bitte an die oben angegebene Kontaktadresse des Verantwortlichen.</p>
                         <h3>Sicherheitsmaßnahmen</h3>
-                        <p>Wir treffen im Übrigen technische und organisatorische Sicherheitsmaßnahmen nach dem Stand der Technik,
+                        <p>
+                            Wir treffen im Übrigen technische und organisatorische Sicherheitsmaßnahmen nach dem Stand der Technik,
                             um die Vorschriften der Datenschutzgesetze einzuhalten und Ihre Daten gegen zufällige oder vorsätzliche
                             Manipulationen, teilweisen oder vollständigen Verlust, Zerstörung oder gegen den unbefugten Zugriff
-                            Dritter zu schützen.</p>
+                            Dritter zu schützen.
+                        </p>
                         <h3>Aktualität und Änderung dieser Datenschutzerklärung</h3>
-                        <p>Diese Datenschutzerklärung ist aktuell gültig und hat den Stand Juni 2018. Aufgrund geänderter gesetzlicher
-                            bzw. behördlicher Vorgaben kann es notwendig werden, diese Datenschutzerklärung anzupassen.</p>
-                        <p>Diese Datenschutzerklärung wurde mit Hilfe des
+                        <p>
+                            Diese Datenschutzerklärung ist aktuell gültig und hat den Stand Juni 2018. Aufgrund geänderter gesetzlicher
+                            bzw. behördlicher Vorgaben kann es notwendig werden, diese Datenschutzerklärung anzupassen.
+                        </p>
+                        <p>
+                            Diese Datenschutzerklärung wurde mit Hilfe des
                             <a href="dsgvo-datenschutz-generator/">Datenschutzerklärungs-Generators</a> von
                             <a title="SOS Recht" href="https://datenschutz.sos-recht.de" target="_blank" class="externalLink">SOS Recht</a> erstellt. SOS Recht ist ein Angebot der
-                            <a title="MMR Müller Müller Rößner Rechtsanwälte Partnerschaft" href="http://mueller-roessner.net" target="_blank" class="externalLink">MMR Müller Müller Rößner Rechtsanwälte Partnerschaft</a> mit Sitz in Berlin.</p>
+                            <a title="MMR Müller Müller Rößner Rechtsanwälte Partnerschaft" href="http://mueller-roessner.net" target="_blank" class="externalLink">MMR Müller Müller Rößner Rechtsanwälte Partnerschaft</a> mit Sitz in Berlin.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -467,7 +505,9 @@
 
     <script type="text/javascript" src="js/jquery.jrumble.1.3.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript" src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/checkForm.js"></script>
 
 </body>
 
