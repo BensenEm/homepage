@@ -18,4 +18,4 @@ try {
 } catch (Exception $e) {
     echo 'Caught exception: ',  $e->getMessage(), "\n";
 }
-header("Location:.");
+header("Location:index.html#contact");
